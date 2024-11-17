@@ -5,6 +5,9 @@
 //  Created by Çağrı Yörükoğlu on 15.11.2024.
 //
 
+
+import netfox
+import NetworkProvider
 import UIKit
 
 @main
@@ -15,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        setNavigationController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        createNetworkLogger(application)
+
+        window?.makeKeyAndVisible()
+        window?.rootViewController = createProductModule()
+
         return true
     }
 
@@ -37,18 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+        application.applicationSupportsShakeToEdit = false
+        NFX.sharedInstance().start()
+        NFX.sharedInstance().setGesture(.custom)
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func setNavigationController() {
+    private func createProductModule() -> UINavigationController {
+        let productListModule: UIViewController = ProductsRouter.createModule()
+        let navigationController: UINavigationController = UINavigationController(rootViewController: productListModule)
+        return navigationController
+    }
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-
-        let mainView: ProductsViewController = ProductsViewController(nibName: "ProductsViewController", bundle: nil)
-
-        navigationController = UINavigationController(rootViewController: mainView)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = navigationController
+    private func createNetworkLogger(_ application: UIApplication) {
+        application.applicationSupportsShakeToEdit = true
+        NFX.sharedInstance().start()
+        NFX.sharedInstance().setGesture(.custom)
     }
 
 }
