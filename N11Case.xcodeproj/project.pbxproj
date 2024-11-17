@@ -140,12 +140,12 @@
 		DF8903EF2CEA3D64009A0C99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF8903E92CEA3D64009A0C99 /* Cells */,
+				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
+				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
 				DF8903EA2CEA3D64009A0C99 /* ProductsInteractor.swift */,
 				DF8903EB2CEA3D64009A0C99 /* ProductsPresenter.swift */,
 				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
-				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
-				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
+				DF8903E92CEA3D64009A0C99 /* Cells */,
 			);
 			path = Products;
 			sourceTree = "<group>";

@@ -21,6 +21,12 @@ final class ProductsViewController: UIViewController, ProductsViewProtocol, UICo
             productsCollectionView.registerNib(for: NormalProductCell.self)
             productsCollectionView.registerNib(for: SponsoredProductCell.self)
             productsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+//            let layoutProvider = ItemListCollectionViewLayoutProvider()
+//            let hasSponsoredSection = presenter.numberOfSections() > 1
+//            let layout = layoutProvider.createLayout(hasSponsoredSection: hasSponsoredSection)
+            let layout = CompositionalLayoutProvider.createLayout()
+            productsCollectionView.setCollectionViewLayout(layout, animated:   true)
+//            productsCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         }
     }
 
@@ -37,14 +43,7 @@ final class ProductsViewController: UIViewController, ProductsViewProtocol, UICo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
         presenter.viewDidLoad()
-    }
-
-    private func setupCollectionView() {
-
-        let layout = CompositionalLayoutProvider.createLayout()
-//        productsCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
     }
 
     func showLoading(_ isLoading: Bool) {
@@ -95,10 +94,14 @@ extension ProductsViewController: UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return presenter.numberOfSections()
+        let numberOfSection: Int = presenter.numberOfSections()
+        print("Number Of Section is \(numberOfSection)")
+        return numberOfSection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.numberOfItems(in: section)
+        let numberOfItems: Int = presenter.numberOfItems(in: section)
+        print("Number Of Items is \(numberOfItems)")
+        return numberOfItems
     }
 }
