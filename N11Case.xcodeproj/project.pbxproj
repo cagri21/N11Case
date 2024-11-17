@@ -24,8 +24,12 @@
 		DF8904022CEA3D64009A0C99 /* SponsoredProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8903E82CEA3D64009A0C99 /* SponsoredProductCell.xib */; };
 		DF8904032CEA3D64009A0C99 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */; };
 		DF8904042CEA3D64009A0C99 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DF8903F02CEA3D64009A0C99 /* .swiftlint.yml */; };
-		DF8904052CEA3D64009A0C99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8903F22CEA3D64009A0C99 /* Assets.xcassets */; };
+		DF8904052CEA3D64009A0C99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8903F22CEA3D64009A0C99 /* Images.xcassets */; };
 		DF8904072CEA3D64009A0C99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */; };
+		DF8904112CEA5EAB009A0C99 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8904102CEA5EAB009A0C99 /* Colors.xcassets */; };
+		DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */; };
+		DF89041E2CEA5EF3009A0C99 /* N11CaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */; };
+		DF89041F2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,26 +64,17 @@
 		DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
 		DF8903F02CEA3D64009A0C99 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF8903F22CEA3D64009A0C99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF8903F22CEA3D64009A0C99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DF8903F32CEA3D64009A0C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF8903F42CEA3D64009A0C99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF8904102CEA5EAB009A0C99 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseTests.swift; sourceTree = "<group>"; };
+		DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseUITests.swift; sourceTree = "<group>"; };
+		DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DFB17D422CE7608200839DA3 /* N11CaseTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = N11CaseTests;
-			sourceTree = "<group>";
-		};
-		DFB17D4C2CE7608200839DA3 /* N11CaseUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = N11CaseUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DFB17D262CE7608000839DA3 /* Frameworks */ = {
@@ -154,23 +149,57 @@
 			isa = PBXGroup;
 			children = (
 				DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */,
-				DF8903F22CEA3D64009A0C99 /* Assets.xcassets */,
 				DF8903F32CEA3D64009A0C99 /* Info.plist */,
 				DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */,
-				DF8903EF2CEA3D64009A0C99 /* Products */,
+				DF89040F2CEA5E72009A0C99 /* Screens */,
 				DF8903E22CEA3D64009A0C99 /* Extensions */,
 				DF8903E42CEA3D64009A0C99 /* Helper */,
+				DF89040E2CEA5E5E009A0C99 /* Reseources */,
 				DF8903F02CEA3D64009A0C99 /* .swiftlint.yml */,
 			);
 			path = N11Case;
+			sourceTree = "<group>";
+		};
+		DF89040E2CEA5E5E009A0C99 /* Reseources */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903F22CEA3D64009A0C99 /* Images.xcassets */,
+				DF8904102CEA5EAB009A0C99 /* Colors.xcassets */,
+			);
+			path = Reseources;
+			sourceTree = "<group>";
+		};
+		DF89040F2CEA5E72009A0C99 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903EF2CEA3D64009A0C99 /* Products */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DF8904192CEA5EE5009A0C99 /* N11CaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */,
+			);
+			path = N11CaseTests;
+			sourceTree = "<group>";
+		};
+		DF89041D2CEA5EF3009A0C99 /* N11CaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */,
+				DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */,
+			);
+			path = N11CaseUITests;
 			sourceTree = "<group>";
 		};
 		DFB17D202CE7608000839DA3 = {
 			isa = PBXGroup;
 			children = (
 				DF8903F62CEA3D64009A0C99 /* N11Case */,
-				DFB17D422CE7608200839DA3 /* N11CaseTests */,
-				DFB17D4C2CE7608200839DA3 /* N11CaseUITests */,
+				DF8904192CEA5EE5009A0C99 /* N11CaseTests */,
+				DF89041D2CEA5EF3009A0C99 /* N11CaseUITests */,
 				DFB17D2A2CE7608000839DA3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -224,9 +253,6 @@
 			dependencies = (
 				DFB17D412CE7608200839DA3 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DFB17D422CE7608200839DA3 /* N11CaseTests */,
-			);
 			name = N11CaseTests;
 			packageProductDependencies = (
 			);
@@ -246,9 +272,6 @@
 			);
 			dependencies = (
 				DFB17D4B2CE7608200839DA3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DFB17D4C2CE7608200839DA3 /* N11CaseUITests */,
 			);
 			name = N11CaseUITests;
 			packageProductDependencies = (
@@ -314,8 +337,9 @@
 				DF8904012CEA3D64009A0C99 /* NormalProductCell.xib in Resources */,
 				DF8904022CEA3D64009A0C99 /* SponsoredProductCell.xib in Resources */,
 				DF8904032CEA3D64009A0C99 /* ProductsViewController.xib in Resources */,
+				DF8904112CEA5EAB009A0C99 /* Colors.xcassets in Resources */,
 				DF8904042CEA3D64009A0C99 /* .swiftlint.yml in Resources */,
-				DF8904052CEA3D64009A0C99 /* Assets.xcassets in Resources */,
+				DF8904052CEA3D64009A0C99 /* Images.xcassets in Resources */,
 				DF8904072CEA3D64009A0C99 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF89041E2CEA5EF3009A0C99 /* N11CaseUITests.swift in Sources */,
+				DF89041F2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
