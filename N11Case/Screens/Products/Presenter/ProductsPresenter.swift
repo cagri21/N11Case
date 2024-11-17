@@ -73,7 +73,7 @@ class ProductsPresenter: ProductsPresenterProtocol {
     }
 
 }
-
+// swiftlint:disable no_grouping_extension
 extension ProductsPresenter: ProductsInteractorOutputProtocol {
     func didFetchProducts(_ response: ProductsResponse) {
         isLoading = false
@@ -97,7 +97,7 @@ extension ProductsPresenter: ProductsInteractorOutputProtocol {
     }
 
 }
-
+// swiftlint:enable no_grouping_extension
 enum SectionType {
     case sponsored([SponsoredProduct])
     case products([Product])

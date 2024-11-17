@@ -74,34 +74,39 @@ final class ProductsViewController: UIViewController, ProductsViewProtocol, UICo
     }
 
 }
-
+// swiftlint:disable no_grouping_extension
 extension ProductsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let section = (presenter as! ProductsPresenter).sections[indexPath.section]
+        guard let productsPresenter = presenter as? ProductsPresenter else {
+            return UICollectionViewCell()
+        }
+
+        let section: SectionType = productsPresenter.sections[indexPath.section]
 
         switch section {
         case .sponsored(let products):
             let cell: SponsoredProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            let product = products[indexPath.item]
+            let product: ProductDisplayable = products[indexPath.item]
             cell.configure(with: product)
             return cell
         case .products(let products):
             let cell: NormalProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            let product = products[indexPath.item]
+            let product: ProductDisplayable = products[indexPath.item]
             cell.configure(with: product)
             return cell
         }
     }
-    
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         let numberOfSection: Int = presenter.numberOfSections()
         print("Number Of Section is \(numberOfSection)")
         return numberOfSection
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let numberOfItems: Int = presenter.numberOfItems(in: section)
         print("Number Of Items is \(numberOfItems)")
         return numberOfItems
     }
 }
+// swiftlint:enable no_grouping_extension

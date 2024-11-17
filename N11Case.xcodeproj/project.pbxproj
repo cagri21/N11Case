@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C92CEA38B8009A0C99 /* NetworkProvider */; };
-		DF8903CD2CEA38C5009A0C99 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903CC2CEA38C5009A0C99 /* SDWebImage */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
 		DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */; };
 		DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */; };
@@ -81,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF8903CD2CEA38C5009A0C99 /* SDWebImage in Frameworks */,
 				DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
 			);
@@ -135,12 +133,10 @@
 		DF8903EF2CEA3D64009A0C99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
-				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
-				DF8903EA2CEA3D64009A0C99 /* ProductsInteractor.swift */,
-				DF8903EB2CEA3D64009A0C99 /* ProductsPresenter.swift */,
-				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
-				DF8903E92CEA3D64009A0C99 /* Cells */,
+				DF8904232CEA78FE009A0C99 /* Interactor */,
+				DF8904222CEA78F8009A0C99 /* Router */,
+				DF8904212CEA78E8009A0C99 /* Presenter */,
+				DF8904202CEA78E4009A0C99 /* View */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -194,6 +190,40 @@
 			path = N11CaseUITests;
 			sourceTree = "<group>";
 		};
+		DF8904202CEA78E4009A0C99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
+				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
+				DF8903E92CEA3D64009A0C99 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF8904212CEA78E8009A0C99 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903EB2CEA3D64009A0C99 /* ProductsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DF8904222CEA78F8009A0C99 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DF8904232CEA78FE009A0C99 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903EA2CEA3D64009A0C99 /* ProductsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		DFB17D202CE7608000839DA3 = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +264,6 @@
 			packageProductDependencies = (
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF8903C92CEA38B8009A0C99 /* NetworkProvider */,
-				DF8903CC2CEA38C5009A0C99 /* SDWebImage */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -315,7 +344,6 @@
 			packageReferences = (
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */,
-				DF8903CB2CEA38C5009A0C99 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -751,14 +779,6 @@
 				kind = branch;
 			};
 		};
-		DF8903CB2CEA38C5009A0C99 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.20.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -771,11 +791,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
-		};
-		DF8903CC2CEA38C5009A0C99 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DF8903CB2CEA38C5009A0C99 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
