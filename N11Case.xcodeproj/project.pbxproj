@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2C6A202CEA8CB700E190D8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2C6A1F2CEA8CB400E190D8 /* BaseViewController.swift */; };
+		DF7176D62CEA8DE20034B2C8 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF7176D52CEA8DE20034B2C8 /* NetworkProvider */; };
+		DF7176D92CEA8E3E0034B2C8 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DF7176D82CEA8E3E0034B2C8 /* ProgressHUD */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C92CEA38B8009A0C99 /* NetworkProvider */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
@@ -49,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF2C6A1F2CEA8CB400E190D8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */,
+				DF7176D92CEA8E3E0034B2C8 /* ProgressHUD in Frameworks */,
+				DF7176D62CEA8DE20034B2C8 /* NetworkProvider in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF2C6A1E2CEA8CAA00E190D8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DF2C6A1F2CEA8CB400E190D8 /* BaseViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +161,7 @@
 				DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */,
 				DF8903F32CEA3D64009A0C99 /* Info.plist */,
 				DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */,
+				DF2C6A1E2CEA8CAA00E190D8 /* Core */,
 				DF89040F2CEA5E72009A0C99 /* Screens */,
 				DF8903E22CEA3D64009A0C99 /* Extensions */,
 				DF8903E42CEA3D64009A0C99 /* Helper */,
@@ -264,6 +279,7 @@
 			packageProductDependencies = (
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF8903C92CEA38B8009A0C99 /* NetworkProvider */,
+				DF7176D82CEA8E3E0034B2C8 /* ProgressHUD */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -344,6 +360,7 @@
 			packageReferences = (
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */,
+				DF7176D72CEA8E3E0034B2C8 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -417,6 +434,7 @@
 			files = (
 				DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */,
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
+				DF2C6A202CEA8CB700E190D8 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
 				DF8903FA2CEA3D64009A0C99 /* NormalProductCell.swift in Sources */,
 				DF8903FB2CEA3D64009A0C99 /* SponsoredProductCell.swift in Sources */,
@@ -772,11 +790,21 @@
 			};
 		};
 		DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
+		DF7176D72CEA8E3E0034B2C8 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cagri21/NetworkProvider";
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
 			requirement = {
 				branch = "feature_/viper-case-study";
 				kind = branch;
+			};
+		};
+		DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
