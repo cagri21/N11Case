@@ -21,7 +21,7 @@ final class ProductsInteractor: ProductsInteractorProtocol {
     }
 
     func fetchProducts(page: Int) {
-        apiService.getProducts(page: page, parameters: nil) { [weak self] result in
+        apiService.retrieveProducts(page: page, parameters: nil) { [weak self] result in
             guard let self = self else {
                 return
             }

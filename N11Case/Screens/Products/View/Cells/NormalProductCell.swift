@@ -9,12 +9,7 @@ import NetworkProvider
 import SDWebImage
 import UIKit
 
-protocol ConfigurableCell {
-    associatedtype DataType
-    func configure(with data: DataType)
-}
-
-class NormalProductCell: UICollectionViewCell, ConfigurableCell {
+class NormalProductCell: UICollectionViewCell {
 
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,28 +19,9 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         // Initialization code
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        // Reset label text
-        titleLabel.text = nil
-        // Reset image view
-        productImageView.image = nil
-        // Reset additional cell properties if needed
-        contentView.backgroundColor = .white
-    }
-
     func configure(with product: ProductDisplayable) {
         titleLabel.text = product.title
-        if product.image.isEmpty {
-            
-        } else {
-            product.getImage { [weak self] Image in
-                guard let self = self else {
-                    return
-                }
-                self.productImageView.image = Image
-            }
-        }
+        productImageView.image = product.imageData
     }
 
 }
