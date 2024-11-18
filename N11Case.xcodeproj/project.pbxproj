@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DF0767952CEB5B8000196CE2 /* ProgressHUD */; };
 		DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767972CEB5BB200196CE2 /* BaseViewController.swift */; };
+		DF0767A32CEB7C7400196CE2 /* SectionPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767A22CEB7C7000196CE2 /* SectionPagerView.swift */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C92CEA38B8009A0C99 /* NetworkProvider */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		DF0767972CEB5BB200196CE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DF0767A22CEB7C7000196CE2 /* SectionPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPagerView.swift; sourceTree = "<group>"; };
 		DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
@@ -114,6 +116,22 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		DF0767A02CEB7C5600196CE2 /* CollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */,
+			);
+			path = CollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		DF0767A12CEB7C6100196CE2 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DF0767A22CEB7C7000196CE2 /* SectionPagerView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +144,8 @@
 		DF8903E42CEA3D64009A0C99 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */,
+				DF0767A12CEB7C6100196CE2 /* UIComponents */,
+				DF0767A02CEB7C5600196CE2 /* CollectionViewLayout */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -438,6 +457,7 @@
 				DF8903FB2CEA3D64009A0C99 /* SponsoredProductCell.swift in Sources */,
 				DF8903FC2CEA3D64009A0C99 /* ProductsInteractor.swift in Sources */,
 				DF8903FD2CEA3D64009A0C99 /* ProductsPresenter.swift in Sources */,
+				DF0767A32CEB7C7400196CE2 /* SectionPagerView.swift in Sources */,
 				DF8903FE2CEA3D64009A0C99 /* ProductsRouter.swift in Sources */,
 				DF8903FF2CEA3D64009A0C99 /* ProductsViewController.swift in Sources */,
 				DF8904002CEA3D64009A0C99 /* AppDelegate.swift in Sources */,
