@@ -19,9 +19,28 @@ class SponsoredProductCell: UICollectionViewCell {
         // Initialization code
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        // Reset label text
+        titleLabel.text = nil
+        // Reset image view
+        productImageView.image = nil
+        // Reset additional cell properties if needed
+        contentView.backgroundColor = .white
+    }
+
     func configure(with product: ProductDisplayable) {
         titleLabel.text = product.title
-        productImageView.image = product.imageData
+        if product.image.isEmpty {
+            
+        } else {
+            product.getImage { [weak self] Image in
+                guard let self = self else {
+                    return
+                }
+                self.productImageView.image = Image
+            }
+        }
     }
 
 }
