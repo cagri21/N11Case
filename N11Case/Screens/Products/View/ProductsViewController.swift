@@ -90,28 +90,28 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
         }
 
         // Handle horizontal scrolling for updating the page control (sponsored section)
-        let sponsoredSectionIndex: Int = 0 // Assuming the sponsored section is the first section
-
-        guard let productsPresenter = presenter as? ProductsPresenter,
-              productsPresenter.sections.indices.contains(sponsoredSectionIndex),
-              case .sponsored(let products) = productsPresenter.sections[sponsoredSectionIndex] else {
-            return
-        }
-
-        // Ensure the horizontal scrolling is being handled
-        if scrollView == productsCollectionView && productsCollectionView.isPagingEnabled {
-            // Calculate the current page for the sponsored section
-            let currentPage: Int = Int((scrollView.contentOffset.x + (0.5 * scrollView.frame.width)) / scrollView.frame.width)
-            print("Current Page: \(currentPage)")
-
-            // Update the pager view in the footer
-            if let pagerView = productsCollectionView.supplementaryView(
-                forElementKind: UICollectionView.elementKindSectionFooter,
-                at: IndexPath(item: 0, section: sponsoredSectionIndex)
-            ) as? SectionPagerView {
-                pagerView.configure(with: products.count, currentPage: currentPage)
-            }
-        }
+//        let sponsoredSectionIndex: Int = 0 // Assuming the sponsored section is the first section
+//
+//        guard let productsPresenter = presenter as? ProductsPresenter,
+//              productsPresenter.sections.indices.contains(sponsoredSectionIndex),
+//              case .sponsored(let products) = productsPresenter.sections[sponsoredSectionIndex] else {
+//            return
+//        }
+//
+//        // Ensure the horizontal scrolling is being handled
+//        if scrollView == productsCollectionView && productsCollectionView.isPagingEnabled {
+//            // Calculate the current page for the sponsored section
+//            let currentPage: Int = Int((scrollView.contentOffset.x + (0.5 * scrollView.frame.width)) / scrollView.frame.width)
+//            print("Current Page: \(currentPage)")
+//
+//            // Update the pager view in the footer
+//            if let pagerView = productsCollectionView.supplementaryView(
+//                forElementKind: UICollectionView.elementKindSectionFooter,
+//                at: IndexPath(item: 0, section: sponsoredSectionIndex)
+//            ) as? SectionPagerView {
+//                pagerView.configure(with: products.count, currentPage: currentPage)
+//            }
+//        }
     }
     
 //    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -188,6 +188,29 @@ extension ProductsViewController: UICollectionViewDataSource {
         }
 
         return UICollectionReusableView()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        guard let productsPresenter = presenter as? ProductsPresenter else {
+            return
+        }
+
+        let section: SectionType = productsPresenter.sections[indexPath.section]
+
+        switch section {
+        case .sponsored(let products):
+            print("pata")
+            if let pagerView = productsCollectionView.supplementaryView(
+                            forElementKind: UICollectionView.elementKindSectionFooter,
+                            at: IndexPath(item: 0, section: 0)
+                        ) as? SectionPagerView {
+                pagerView.configure(with: products.count, currentPage: indexPath.row)
+                        }
+            return
+        case .products(_):
+            print("ata")
+        }
     }
 }
 // swiftlint:enable no_grouping_extension
