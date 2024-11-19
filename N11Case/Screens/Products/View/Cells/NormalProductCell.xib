@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,30 +26,37 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Oo-zNI">
-                        <rect key="frame" x="4" y="105" width="34" height="15.666666666666671"/>
+                        <rect key="frame" x="4.0000000000000018" y="120" width="31.666666666666671" height="14.333333333333343"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                         <color key="textColor" name="ProductTitle"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAB-wJ-ebb">
-                        <rect key="frame" x="4" y="123.66666666666669" width="40" height="18"/>
+                        <rect key="frame" x="4" y="137.33333333333334" width="35.333333333333336" height="15.666666666666657"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                         <color key="textColor" name="ProductDiscountPrice"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-JY-Bh1">
-                        <rect key="frame" x="4" y="144.66666666666666" width="40" height="18"/>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-JY-Bh1">
+                        <rect key="frame" x="4" y="156" width="35.333333333333336" height="15.666666666666657"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                         <color key="textColor" name="ProductNormalPrice"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-W5-NOH" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="4" y="105" width="86" height="10"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="ytZ-jv-3Jy"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhI-hD-uYV">
-                        <rect key="frame" x="61" y="180.33333333333334" width="34" height="15.666666666666657"/>
+                        <rect key="frame" x="65.666666666666671" y="182.66666666666666" width="29.333333333333329" height="13.333333333333343"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                         <color key="textColor" name="ProductTitle"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -59,26 +67,30 @@
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="top" secondItem="hbZ-Oo-zNI" secondAttribute="bottom" constant="3" id="CTl-0e-69T"/>
+                <constraint firstItem="ni3-W5-NOH" firstAttribute="top" secondItem="gaT-Tq-bM5" secondAttribute="bottom" constant="5" id="CeL-pQ-ccH"/>
                 <constraint firstAttribute="trailing" secondItem="gaT-Tq-bM5" secondAttribute="trailing" id="Ge1-eE-Sc2"/>
                 <constraint firstAttribute="bottom" secondItem="hhI-hD-uYV" secondAttribute="bottom" constant="4" id="Iyy-c4-rA3"/>
-                <constraint firstItem="hbZ-Oo-zNI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="KDF-qB-R2b"/>
                 <constraint firstAttribute="trailing" secondItem="hhI-hD-uYV" secondAttribute="trailing" constant="5" id="N0s-RB-D6k"/>
                 <constraint firstItem="gaT-Tq-bM5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O32-xB-Qc9"/>
+                <constraint firstItem="hbZ-Oo-zNI" firstAttribute="top" secondItem="ni3-W5-NOH" secondAttribute="bottom" constant="5" id="Qnn-5A-FV5"/>
+                <constraint firstAttribute="trailing" secondItem="ni3-W5-NOH" secondAttribute="trailing" constant="10" id="USh-fu-n7n"/>
                 <constraint firstItem="wxI-JY-Bh1" firstAttribute="leading" secondItem="dAB-wJ-ebb" secondAttribute="leading" id="WK8-vf-r48"/>
                 <constraint firstItem="hhI-hD-uYV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Z14-ii-He1"/>
+                <constraint firstItem="ni3-W5-NOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="bef-Aw-aYV"/>
+                <constraint firstItem="hbZ-Oo-zNI" firstAttribute="leading" secondItem="ni3-W5-NOH" secondAttribute="leading" id="cqO-yE-azN"/>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="leading" secondItem="hbZ-Oo-zNI" secondAttribute="leading" id="iBY-nP-NXU"/>
-                <constraint firstItem="hbZ-Oo-zNI" firstAttribute="top" secondItem="gaT-Tq-bM5" secondAttribute="bottom" constant="5" id="iQu-au-mio"/>
                 <constraint firstItem="wxI-JY-Bh1" firstAttribute="top" secondItem="dAB-wJ-ebb" secondAttribute="bottom" constant="3" id="k3V-hP-pF9"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="trailing" constant="5" id="l3a-Ff-xRn"/>
                 <constraint firstItem="gaT-Tq-bM5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qfZ-48-Y5L"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hbZ-Oo-zNI" secondAttribute="trailing" constant="5" id="r18-ZP-CRo"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dAB-wJ-ebb" secondAttribute="trailing" constant="5" id="wAO-o3-f9Q"/>
-                <constraint firstItem="hhI-hD-uYV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="bottom" constant="5" id="wkW-L7-3xG"/>
+                <constraint firstItem="hhI-hD-uYV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="bottom" constant="3" id="wkW-L7-3xG"/>
             </constraints>
             <connections>
                 <outlet property="discountPriceLabel" destination="wxI-JY-Bh1" id="lq9-vv-dKH"/>
                 <outlet property="priceLabel" destination="dAB-wJ-ebb" id="ekl-g8-LPl"/>
                 <outlet property="productImageView" destination="gaT-Tq-bM5" id="0nG-VN-3yz"/>
+                <outlet property="rateView" destination="ni3-W5-NOH" id="MqH-KG-zCe"/>
                 <outlet property="sellerLabel" destination="hhI-hD-uYV" id="Dhe-1M-UNn"/>
                 <outlet property="titleLabel" destination="hbZ-Oo-zNI" id="ZGE-oh-bXW"/>
             </connections>
@@ -98,5 +110,8 @@
         <namedColor name="ProductTitle">
             <color red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -21,6 +21,7 @@
 		DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C832CECFD06002B42AD /* UIColor+Ext.swift */; };
 		DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C8C2CED01CD002B42AD /* NetworkProvider */; };
 		DF475C932CED0A56002B42AD /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */; };
+		DF475C962CED25C4002B42AD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C952CED25C4002B42AD /* Cosmos */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
 		DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */; };
@@ -107,6 +108,7 @@
 			files = (
 				DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
+				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +393,7 @@
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C8C2CED01CD002B42AD /* NetworkProvider */,
+				DF475C952CED25C4002B42AD /* Cosmos */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -472,6 +475,7 @@
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */,
+				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -919,6 +923,14 @@
 				kind = branch;
 			};
 		};
+		DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
 		DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kasketis/netfox";
@@ -939,6 +951,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
+		};
+		DF475C952CED25C4002B42AD /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
 		};
 		DF8903C62CEA38AD009A0C99 /* netfox */ = {
 			isa = XCSwiftPackageProductDependency;

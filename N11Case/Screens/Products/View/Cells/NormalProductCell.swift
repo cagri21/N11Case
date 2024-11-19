@@ -5,9 +5,11 @@
 //  Created by Çağrı Yörükoğlu on 17.11.2024.
 //
 
+import Cosmos
 import NetworkProvider
 import SDWebImage
 import UIKit
+
 
 protocol ConfigurableCell {
     associatedtype DataType
@@ -16,6 +18,7 @@ protocol ConfigurableCell {
 
 class NormalProductCell: UICollectionViewCell, ConfigurableCell {
 
+    @IBOutlet weak var rateView: CosmosView!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -34,6 +37,8 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         priceLabel.isHidden = false
         discountPriceLabel.isHidden = false // Discount label is hidden by default
         productImageView.isHidden = false
+        rateView.isHidden = true
+        discountPriceLabel.isHidden = true
 
         // Reset label texts
         titleLabel.text = nil
@@ -54,6 +59,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         titleLabel.text = product.title
         priceLabel.text = CurrencyFormatter.turkey.format(price: product.price)
         sellerLabel.text = product.sellerName
+        rateView.settings.starSize = 15
 
         if let discountedPrice = product.instantDiscountPrice {
             discountPriceLabel.isHidden = false
@@ -62,13 +68,11 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         } else {
             priceLabel.strikeThrough(false)
             priceLabel.textColor = UIColor.productNormalPrice
-            discountPriceLabel.isHidden = true
         }
 
         if let rate = product.rate {
-
-        } else {
-
+            rateView.rating = rate
+            rateView.isHidden = false
         }
 
         if product.image.isEmpty {
