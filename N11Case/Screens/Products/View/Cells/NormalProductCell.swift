@@ -11,6 +11,20 @@ import SDWebImage
 import UIKit
 
 class NormalProductCell: BaseProductCell {
+    
+    @IBOutlet weak var sellerLabel: UILabel!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        sellerLabel.text = nil
+    }
+
+    override func configure(with product: any ProductDisplayable) {
+        super.configure(with: product)
+        let product = product as! Product
+        rateView.settings.starSize = 15
+        sellerLabel.text = product.sellerName
+    }
 }
 
 extension UIImageView{
