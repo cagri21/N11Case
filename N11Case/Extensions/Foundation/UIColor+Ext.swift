@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIColor {
-    static let ProductBackgroundColor: UIColor = UIColor(named: "ProductBackgroundColor") ?? UIColor.label
+    static let ProductBackgroundColor: UIColor = UIColor(named: "ProductBackground") ?? UIColor.label
     static let ProductTitleColor: UIColor = UIColor(named: "ProductTitle") ?? UIColor.label
     static let ProductDiscountColor: UIColor = UIColor(named: "ProductDiscountPrice") ?? UIColor.label
     static let ProductMainColor: UIColor = UIColor(named: "ProductMainPrice") ?? UIColor.label

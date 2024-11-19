@@ -21,7 +21,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var discountPriceLabel: UILabel!
     @IBOutlet weak var sellerLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

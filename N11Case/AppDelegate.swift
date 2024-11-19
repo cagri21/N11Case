@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 
         if !isUnitTesting {
+            configureNavigationBarAppearance()
             startNetworkLogger(application)
         }
 
@@ -78,5 +79,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.applicationSupportsShakeToEdit = false
         NFX.sharedInstance().stop()
         #endif
+    }
+
+    private func configureNavigationBarAppearance() {
+        // Set the background color
+        UINavigationBar.appearance().barTintColor = UIColor.ProductBackgroundColor
+
+        // Set the tint color for bar button items
+        UINavigationBar.appearance().tintColor = UIColor.white
+
+            // Set the title text attributes
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: 18, weight: .bold)
+        ]
+
+        // For iOS 15+, configure the appearance directly
+        if #available(iOS 15.0, *) {
+            let appearance: UINavigationBarAppearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.ProductBackgroundColor
+            appearance.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                .font: UIFont.systemFont(ofSize: 18, weight: .bold)
+            ]
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
