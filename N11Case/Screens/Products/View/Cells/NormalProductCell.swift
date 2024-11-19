@@ -11,7 +11,6 @@ import SDWebImage
 import UIKit
 
 class NormalProductCell: BaseProductCell {
-    
     @IBOutlet weak var sellerLabel: UILabel!
 
     override func prepareForReuse() {
@@ -21,8 +20,13 @@ class NormalProductCell: BaseProductCell {
 
     override func configure(with product: any ProductDisplayable) {
         super.configure(with: product)
-        let product = product as! Product
+
         rateView.settings.starSize = 15
+
+        guard let product = product as? Product else {
+            DLog("\(UserDefaults.self): Invalid product type.")
+            return
+        }
         sellerLabel.text = product.sellerName
     }
 }
