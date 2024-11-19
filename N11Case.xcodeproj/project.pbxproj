@@ -22,6 +22,8 @@
 		DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C8C2CED01CD002B42AD /* NetworkProvider */; };
 		DF475C932CED0A56002B42AD /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */; };
 		DF475C962CED25C4002B42AD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C952CED25C4002B42AD /* Cosmos */; };
+		DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */; };
+		DF475C9C2CED2B5B002B42AD /* ScreenSizeAdjustingConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
 		DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */; };
@@ -75,6 +77,8 @@
 		DF475C802CECF9D7002B42AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		DF475C832CECFD06002B42AD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
+		DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeAdjustingConstraint.swift; sourceTree = "<group>"; };
+		DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeAdjustingConstraintTests.swift; sourceTree = "<group>"; };
 		DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
@@ -147,14 +151,6 @@
 			path = CollectionViewLayout;
 			sourceTree = "<group>";
 		};
-		DF0767A12CEB7C6100196CE2 /* UIComponents */ = {
-			isa = PBXGroup;
-			children = (
-				DF0767A22CEB7C7000196CE2 /* SectionPagerView.swift */,
-			);
-			path = UIComponents;
-			sourceTree = "<group>";
-		};
 		DF0767A42CEB82D000196CE2 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +218,48 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		DF475C972CED2B1E002B42AD /* ScreenSize */ = {
+			isa = PBXGroup;
+			children = (
+				DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */,
+			);
+			path = ScreenSize;
+			sourceTree = "<group>";
+		};
+		DF475C9A2CED2B43002B42AD /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		DF475C9D2CED2C32002B42AD /* UIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DF475C9F2CED2C75002B42AD /* CollectionViewHelpers */,
+				DF475C972CED2B1E002B42AD /* ScreenSize */,
+			);
+			path = UIHelper;
+			sourceTree = "<group>";
+		};
+		DF475C9E2CED2C43002B42AD /* LogicHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */,
+			);
+			path = LogicHelper;
+			sourceTree = "<group>";
+		};
+		DF475C9F2CED2C75002B42AD /* CollectionViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				DF0767A22CEB7C7000196CE2 /* SectionPagerView.swift */,
+				DF0767A02CEB7C5600196CE2 /* CollectionViewLayout */,
+			);
+			path = CollectionViewHelpers;
+			sourceTree = "<group>";
+		};
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,9 +276,8 @@
 		DF8903E42CEA3D64009A0C99 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */,
-				DF0767A12CEB7C6100196CE2 /* UIComponents */,
-				DF0767A02CEB7C5600196CE2 /* CollectionViewLayout */,
+				DF475C9E2CED2C43002B42AD /* LogicHelper */,
+				DF475C9D2CED2C32002B42AD /* UIHelper */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -304,6 +341,7 @@
 		DF8904192CEA5EE5009A0C99 /* N11CaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				DF475C9A2CED2B43002B42AD /* UIComponents */,
 				DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */,
 			);
 			path = N11CaseTests;
@@ -554,6 +592,7 @@
 				DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */,
 				DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */,
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
+				DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */,
 				DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */,
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
@@ -576,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF475C9C2CED2B5B002B42AD /* ScreenSizeAdjustingConstraintTests.swift in Sources */,
 				DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

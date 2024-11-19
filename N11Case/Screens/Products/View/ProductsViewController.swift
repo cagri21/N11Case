@@ -32,7 +32,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
 //            let hasSponsoredSection = presenter.numberOfSections() > 1
 //            let layout = layoutProvider.createLayout(hasSponsoredSection: hasSponsoredSection)
             let layout = CustomProductLayout.createLayout()
-            productsCollectionView.setCollectionViewLayout(layout, animated:   true)
+            productsCollectionView.setCollectionViewLayout(layout, animated: true)
 //            productsCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         }
     }
@@ -178,6 +178,7 @@ extension ProductsViewController: UICollectionViewDataSource {
                     at: IndexPath(item: 0, section: indexPath.section)
                 ) as? SectionPagerView {
                     pagerView.configure(with: products.count, currentPage: indexPath.row)
+                    
             }
         }
     }

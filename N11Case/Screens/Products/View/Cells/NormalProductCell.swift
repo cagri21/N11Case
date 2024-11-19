@@ -75,9 +75,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
             rateView.isHidden = false
         }
 
-        if product.image.isEmpty {
-
-        } else {
+        if !product.image.isEmpty {
             productImageView.downloadImage(url: product.image)
         }
     }

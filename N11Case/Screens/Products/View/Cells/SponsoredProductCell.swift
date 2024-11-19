@@ -31,16 +31,9 @@ class SponsoredProductCell: UICollectionViewCell {
 
     func configure(with product: ProductDisplayable) {
         titleLabel.text = product.title
-        if product.image.isEmpty {
-            
-        } else {
-            product.getImage { [weak self] Image in
-                guard let self = self else {
-                    return
-                }
-                self.productImageView.image = Image
-            }
-        }
+        if !product.image.isEmpty {
+            productImageView.downloadImage(url: product.image)
+        } 
     }
 
 }

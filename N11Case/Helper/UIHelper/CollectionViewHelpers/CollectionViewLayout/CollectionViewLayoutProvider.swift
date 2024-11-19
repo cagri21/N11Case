@@ -23,26 +23,36 @@ final class CustomProductLayout {
     }
 
     private static func createSponsoredProductsSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        // Item
+
+        let itemSpace: CGFloat = 10
+
+        let containerWidth: CGFloat = environment.container.contentSize.width - itemSpace
+        let containerHeight: CGFloat = environment.container.contentSize.height / 4
+
+        // Define the item size (fills the entire screen horizontally and vertically)
         let itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalHeight(1.0)
+            widthDimension: .absolute(containerWidth ),
+            heightDimension: .absolute(containerHeight)
         )
         let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: itemSpace / 2, bottom: 0, trailing: itemSpace / 2)
 
-        // Group
-        let groupHeight = environment.container.contentSize.height / 4  // Adjust to 1/4 of screen height
+        // Define the group size (same as item size)
         let groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(groupHeight)
+            widthDimension: .absolute(containerWidth),
+            heightDimension: .absolute(containerHeight)
         )
         let group: NSCollectionLayoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
-        // Section
+        // Section configuration
         let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging // Ensures one item per page
-        section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        section.orthogonalScrollingBehavior = .paging // Enables paging for one item per screen
+        section.contentInsets = NSDirectionalEdgeInsets(
+            top: 0,
+            leading: itemSpace / 2,
+            bottom: 0,
+            trailing: itemSpace / 2
+        )
 
         // Footer Supplementary View (Pager)
         let footerSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(30))
