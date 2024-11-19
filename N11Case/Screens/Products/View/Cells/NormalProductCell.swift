@@ -16,7 +16,6 @@ protocol ConfigurableCell {
 
 class NormalProductCell: UICollectionViewCell, ConfigurableCell {
 
-
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -49,7 +48,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         priceLabel.textColor = UIColor.productDiscountPrice // Reset to default text color
     }
 
-    func configure(with product: ProductDisplayable) {
+    func configure(with product: Product) {
         titleLabel.text = product.title
         priceLabel.text = CurrencyFormatter.turkey.format(price: product.price)
 
@@ -75,11 +74,8 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
             productImageView.downloadImage(url: product.image)
         }
     }
-    
-    
-
-    
 }
+
 extension UIImageView{
     func downloadImage(url:String){
       //remove space if a url contains.

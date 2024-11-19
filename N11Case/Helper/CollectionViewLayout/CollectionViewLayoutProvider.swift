@@ -56,27 +56,36 @@ final class CustomProductLayout {
     }
 
     private static func createNormalProductsSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        // Item size
-        let itemWidth: Double = environment.container.contentSize.width / 2.2
+
+        // Calculate the width for two items
+        let totalWidth: CGFloat = environment.container.contentSize.width
+        let spacing: CGFloat = 10 // Space between items and edges
+        let itemWidth: CGFloat = (totalWidth - (3 * spacing)) / 2 // Subtract 3 spacings (1 for leading, 1 for middle, 1 for trailing)
+
+        // Item size (height is 1.8 times the width)
         let itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(
             widthDimension: .absolute(itemWidth),
-            heightDimension: .absolute(itemWidth * 2.0)
+            heightDimension: .absolute(itemWidth * 1.8) // Height is 1.8 times the width
         )
         let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
 
-        // Group
+        // Group size (spans two items horizontally in one row)
         let groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(itemWidth * 2.0 + 5) // One row's height with spacing
+            widthDimension: .absolute(totalWidth),
+            heightDimension: .absolute(itemWidth * 1.8) // Height matches the item height
         )
         let group: NSCollectionLayoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = .fixed(10)
+        group.interItemSpacing = .fixed(spacing)
 
-        // Section
+        // Section settings
         let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 10
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-
+        section.interGroupSpacing = spacing
+        section.contentInsets = NSDirectionalEdgeInsets(
+            top: spacing,
+            leading: spacing,
+            bottom: spacing,
+            trailing: spacing
+        )
         return section
     }
 }

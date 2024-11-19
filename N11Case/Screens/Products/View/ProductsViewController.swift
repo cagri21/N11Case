@@ -141,7 +141,7 @@ extension ProductsViewController: UICollectionViewDataSource {
             return cell
         case .products(let products):
             let cell: NormalProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            cell.configure(with: product)
+            cell.configure(with: product as! Product)
             return cell
         }
     }

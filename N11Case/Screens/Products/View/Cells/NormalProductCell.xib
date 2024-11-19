@@ -22,7 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="BP1-YZ-x2R"/>
                             <constraint firstAttribute="width" secondItem="gaT-Tq-bM5" secondAttribute="height" multiplier="1:1" id="Ui5-8e-cdo"/>
                         </constraints>
                     </imageView>
@@ -50,14 +49,14 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gaT-Tq-bM5" secondAttribute="trailing" id="2ee-gQ-wuM"/>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="top" secondItem="hbZ-Oo-zNI" secondAttribute="bottom" constant="3" id="CTl-0e-69T"/>
+                <constraint firstAttribute="trailing" secondItem="gaT-Tq-bM5" secondAttribute="trailing" id="Ge1-eE-Sc2"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="bottom" constant="5" id="Hvk-vW-Eei"/>
                 <constraint firstItem="hbZ-Oo-zNI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="KDF-qB-R2b"/>
-                <constraint firstItem="gaT-Tq-bM5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QHm-gH-VYl"/>
+                <constraint firstItem="gaT-Tq-bM5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O32-xB-Qc9"/>
                 <constraint firstItem="wxI-JY-Bh1" firstAttribute="leading" secondItem="dAB-wJ-ebb" secondAttribute="leading" id="WK8-vf-r48"/>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="leading" secondItem="hbZ-Oo-zNI" secondAttribute="leading" id="iBY-nP-NXU"/>
                 <constraint firstItem="hbZ-Oo-zNI" firstAttribute="top" secondItem="gaT-Tq-bM5" secondAttribute="bottom" constant="5" id="iQu-au-mio"/>
@@ -88,6 +87,9 @@
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
