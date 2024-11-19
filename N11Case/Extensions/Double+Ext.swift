@@ -9,6 +9,7 @@ import UIKit
 
 extension Double {
     func toString() -> String {
-        return String(format: "%.1f",self)
+        let stringValue: String = String(format: "%.1f", self)
+        return stringValue
     }
 }

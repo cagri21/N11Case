@@ -10,6 +10,6 @@ import NetworkProvider
 import SDWebImage
 import UIKit
 
-class SponsoredProductCell: BaseProductCell {
+final class SponsoredProductCell: BaseProductCell {
 
 }

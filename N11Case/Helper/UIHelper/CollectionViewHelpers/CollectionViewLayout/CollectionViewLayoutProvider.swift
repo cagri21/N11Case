@@ -8,7 +8,6 @@
 import NetworkProvider
 import UIKit
 
-
 final class CustomProductLayout {
     static func createLayout() -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, environment in

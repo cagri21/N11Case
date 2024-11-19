@@ -8,21 +8,27 @@
 import UIKit
 
 extension UILabel {
-
-func strikeThrough(_ isStrikeThrough:Bool) {
-    if isStrikeThrough {
-        if let lblText = self.text {
-            let attributeString =  NSMutableAttributedString(string: lblText)
-            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
-            self.attributedText = attributeString
-        }
-    } else {
-        if let attributedStringText = self.attributedText {
-            let txt = attributedStringText.string
+    func strikeThrough(_ isStrikeThrough: Bool) {
+        guard let labelText = self.text, !labelText.isEmpty else {
             self.attributedText = nil
-            self.text = txt
             return
         }
-    }
+
+        if isStrikeThrough {
+            // Apply strikethrough style
+            let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: labelText)
+            attributeString.addAttribute(
+                .strikethroughStyle,
+                value: NSUnderlineStyle.single.rawValue,
+                range: NSRange(location: 0, length: attributeString.length)
+            )
+            self.attributedText = attributeString
+        } else {
+            // Remove strikethrough and restore plain text
+            if let attributedStringText = self.attributedText?.string {
+                self.attributedText = nil
+                self.text = attributedStringText
+            }
+        }
     }
 }

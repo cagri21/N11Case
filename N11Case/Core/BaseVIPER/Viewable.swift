@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 protocol Viewable: AnyObject {
     func push(_ vc: UIViewController, animated: Bool)
     func present(_ vc: UIViewController, animated: Bool)

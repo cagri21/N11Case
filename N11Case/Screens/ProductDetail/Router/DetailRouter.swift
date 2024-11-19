@@ -16,8 +16,8 @@ final class DetailRouter: DetailRouterProtocol {
 
     static func createModule(with product: ProductDisplayable) -> UIViewController {
 //        let interactor = DetailInteractor(product: product)
-        let router = DetailRouter()
-        let viewController = ProductDetailViewController()
+        let router: DetailRouter = DetailRouter()
+        let viewController: ProductDetailViewController = ProductDetailViewController()
 //        let presenter = DetailPresenter(view: viewController, interactor: interactor, router: router)
 //        viewController.presenter = presenter
 //        interactor.presenter = presenter

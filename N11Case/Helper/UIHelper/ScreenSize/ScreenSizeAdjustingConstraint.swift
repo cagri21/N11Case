@@ -1,5 +1,5 @@
 //
-//  RMScreenSizeAdjustingConstraint.swift
+//  ScreenSizeAdjustingConstraint.swift
 //  N11Case
 //
 //  Created by Çağrı Yörükoğlu on 19.11.2024.
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class ScreenSizeAdjustingConstraintTests: NSLayoutConstraint {
+class ScreenSizeAdjustingConstraint: NSLayoutConstraint {
 
     // MARK: - Properties
     @IBInspectable var adjustsToHeight: Bool = false
@@ -39,4 +39,3 @@ class ScreenSizeAdjustingConstraintTests: NSLayoutConstraint {
     }
 
 }
-

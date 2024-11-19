@@ -19,7 +19,7 @@ protocol ProductsPresenterProtocol: AnyObject {
     func didSelectProduct(_ product: ProductDisplayable)
 }
 
-class ProductsPresenter: ProductsPresenterProtocol {
+final class ProductsPresenter: ProductsPresenterProtocol {
 
     private weak var view: ProductsViewProtocol?
     private let interactor: ProductsInteractorProtocol

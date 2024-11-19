@@ -46,6 +46,8 @@
 		DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */; };
 		DF89041E2CEA5EF3009A0C99 /* N11CaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */; };
 		DF89041F2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */; };
+		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
+		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD7D75F2CED529E00BA5D8B /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +227,7 @@
 		DF475C972CED2B1E002B42AD /* ScreenSize */ = {
 			isa = PBXGroup;
 			children = (
+				DFD7D75F2CED529E00BA5D8B /* UIManager.swift */,
 				DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */,
 			);
 			path = ScreenSize;
@@ -231,6 +236,7 @@
 		DF475C9A2CED2B43002B42AD /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */,
 				DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */,
 			);
 			path = UIComponents;
@@ -616,6 +622,7 @@
 				DF475CA32CED48DA002B42AD /* BaseProductCell.swift in Sources */,
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
+				DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */,
 				DF0767A72CEB836A00196CE2 /* Viewable.swift in Sources */,
 				DF8903FA2CEA3D64009A0C99 /* NormalProductCell.swift in Sources */,
 				DF8903FB2CEA3D64009A0C99 /* SponsoredProductCell.swift in Sources */,
@@ -636,6 +643,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF475C9C2CED2B5B002B42AD /* ScreenSizeAdjustingConstraintTests.swift in Sources */,
+				DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */,
 				DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

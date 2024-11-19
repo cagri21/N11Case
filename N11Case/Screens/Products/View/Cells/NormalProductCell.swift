@@ -10,7 +10,7 @@ import NetworkProvider
 import SDWebImage
 import UIKit
 
-class NormalProductCell: BaseProductCell {
+final class NormalProductCell: BaseProductCell {
     @IBOutlet weak var sellerLabel: UILabel!
 
     override func prepareForReuse() {
