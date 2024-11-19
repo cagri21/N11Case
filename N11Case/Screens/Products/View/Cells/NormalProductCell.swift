@@ -18,6 +18,8 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
 
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var discountPriceLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +38,9 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
 
     func configure(with product: ProductDisplayable) {
         titleLabel.text = product.title
+        priceLabel.attributedText = product.price.toString().strikeThrough()
+        discountPriceLabel.text = product.instantDiscountPrice.toString()
+
         if product.image.isEmpty {
 
         } else {

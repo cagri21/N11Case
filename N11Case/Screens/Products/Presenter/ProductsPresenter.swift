@@ -66,9 +66,10 @@ class ProductsPresenter: ProductsPresenterProtocol {
             return products.count
         }
     }
-    
+
     func sectionType(at section: Int) -> SectionType {
-        return sections[section]
+        let sectionType: SectionType = sections[section]
+        return sectionType
     }
 
     func product(at indexPath: IndexPath) -> ProductDisplayable {

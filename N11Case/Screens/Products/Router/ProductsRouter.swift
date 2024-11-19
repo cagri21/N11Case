@@ -25,7 +25,7 @@ final class ProductsRouter: ProductsRouterProtocol {
         interactor.presenter = presenter
         return viewController
     }
-    
+
     func navigateToDetail(from view: BaseViewController, with product: ProductDisplayable) {
         let detailViewController = DetailRouter.createModule(with: product)
         view.navigationController?.pushViewController(detailViewController, animated: true)

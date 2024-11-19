@@ -15,8 +15,12 @@
 		DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */; };
 		DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */; };
 		DF0767B42CEB861700196CE2 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767B32CEB860F00196CE2 /* DetailRouter.swift */; };
+		DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */; };
+		DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */; };
+		DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C802CECF9D7002B42AD /* Double+Ext.swift */; };
+		DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C832CECFD06002B42AD /* UIColor+Ext.swift */; };
+		DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C8C2CED01CD002B42AD /* NetworkProvider */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
-		DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C92CEA38B8009A0C99 /* NetworkProvider */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
 		DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */; };
 		DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */; };
@@ -64,6 +68,10 @@
 		DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		DF0767B32CEB860F00196CE2 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		DF475C802CECF9D7002B42AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		DF475C832CECFD06002B42AD /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
@@ -95,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
-				DF8903CA2CEA38B8009A0C99 /* NetworkProvider in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,9 +210,21 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		DF475C822CECFD00002B42AD /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				DF475C832CECFD06002B42AD /* UIColor+Ext.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DF475C822CECFD00002B42AD /* Foundation */,
+				DF475C802CECF9D7002B42AD /* Double+Ext.swift */,
+				DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */,
+				DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */,
 				DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */,
 				DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */,
 			);
@@ -366,8 +386,8 @@
 			name = N11Case;
 			packageProductDependencies = (
 				DF8903C62CEA38AD009A0C99 /* netfox */,
-				DF8903C92CEA38B8009A0C99 /* NetworkProvider */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
+				DF475C8C2CED01CD002B42AD /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -447,8 +467,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
-				DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -525,17 +545,21 @@
 				DF0767B42CEB861700196CE2 /* DetailRouter.swift in Sources */,
 				DF0767A92CEB83A300196CE2 /* Routable.swift in Sources */,
 				DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */,
+				DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */,
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
+				DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */,
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
 				DF0767A72CEB836A00196CE2 /* Viewable.swift in Sources */,
 				DF8903FA2CEA3D64009A0C99 /* NormalProductCell.swift in Sources */,
 				DF8903FB2CEA3D64009A0C99 /* SponsoredProductCell.swift in Sources */,
+				DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */,
 				DF8903FC2CEA3D64009A0C99 /* ProductsInteractor.swift in Sources */,
 				DF8903FD2CEA3D64009A0C99 /* ProductsPresenter.swift in Sources */,
 				DF0767A32CEB7C7400196CE2 /* SectionPagerView.swift in Sources */,
 				DF8903FE2CEA3D64009A0C99 /* ProductsRouter.swift in Sources */,
 				DF8903FF2CEA3D64009A0C99 /* ProductsViewController.swift in Sources */,
+				DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */,
 				DF8904002CEA3D64009A0C99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,20 +907,20 @@
 				minimumVersion = 14.1.3;
 			};
 		};
+		DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cagri21/NetworkProvider";
+			requirement = {
+				branch = "feature_/viper-case-study";
+				kind = branch;
+			};
+		};
 		DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kasketis/netfox";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.21.0;
-			};
-		};
-		DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cagri21/NetworkProvider";
-			requirement = {
-				branch = "feature_/viper-case-study";
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -907,15 +931,15 @@
 			package = DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
 		};
+		DF475C8C2CED01CD002B42AD /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */;
+			productName = NetworkProvider;
+		};
 		DF8903C62CEA38AD009A0C99 /* netfox */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
-		};
-		DF8903C92CEA38B8009A0C99 /* NetworkProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DF8903C82CEA38B8009A0C99 /* XCRemoteSwiftPackageReference "NetworkProvider" */;
-			productName = NetworkProvider;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

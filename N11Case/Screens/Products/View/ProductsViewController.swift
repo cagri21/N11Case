@@ -8,7 +8,6 @@ import NetworkProvider
 import ProgressHUD
 import UIKit
 
-
 protocol ProductsViewProtocol: AnyObject {
     func showLoading(_ isLoading: Bool)
     func showProducts()
@@ -20,14 +19,14 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
         didSet {
             productsCollectionView.delegate = self
             productsCollectionView.dataSource = self
-            
+
             productsCollectionView.registerNib(for: NormalProductCell.self)
             productsCollectionView.registerNib(for: SponsoredProductCell.self)
             productsCollectionView.translatesAutoresizingMaskIntoConstraints = false
             productsCollectionView.register(
                     SectionPagerView.self,
                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                    withReuseIdentifier: SectionPagerView.reuseIdentifier
+                    withReuseIdentifier: SectionPagerView().className
                 )
 //            let layoutProvider = ItemListCollectionViewLayoutProvider()
 //            let hasSponsoredSection = presenter.numberOfSections() > 1
@@ -162,7 +161,7 @@ extension ProductsViewController: UICollectionViewDataSource {
         // Check for Sponsored Section Footer
         if kind == UICollectionView.elementKindSectionFooter, case .sponsored(let products) = sectionType {
             // Create and configure the pager view for the sponsored section
-            let pagerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionPagerView.reuseIdentifier, for: indexPath) as! SectionPagerView
+            let pagerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionPagerView().className, for: indexPath) as! SectionPagerView
             pagerView.configure(with: products.count, currentPage: 0) // Start with the first page
             return pagerView
         }

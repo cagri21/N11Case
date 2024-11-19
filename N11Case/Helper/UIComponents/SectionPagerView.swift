@@ -8,10 +8,9 @@
 import UIKit
 
 class SectionPagerView: UICollectionReusableView {
-    static let reuseIdentifier = "SectionPagerView"
 
     private let pageControl: UIPageControl = {
-        let pageControl = UIPageControl()
+        let pageControl: UIPageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.currentPageIndicatorTintColor = .black
         pageControl.pageIndicatorTintColor = .lightGray
@@ -24,7 +23,7 @@ class SectionPagerView: UICollectionReusableView {
 
         NSLayoutConstraint.activate([
             pageControl.centerXAnchor.constraint(equalTo: centerXAnchor),
-            pageControl.centerYAnchor.constraint(equalTo: centerYAnchor),
+            pageControl.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 
