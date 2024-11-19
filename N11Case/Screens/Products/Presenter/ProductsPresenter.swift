@@ -83,6 +83,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 
     func didSelectProduct(_ product: ProductDisplayable) {
         guard let view = view as? BaseViewController else {
+            DLog("\(ProductsPresenter.self): View couldn't find at presenter in didSelectProduct.")
             return
         }
 

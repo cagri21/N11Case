@@ -28,3 +28,7 @@ extension Routerable {
         view.pop(animated: animated)
     }
 }
+
+protocol NavigationProviderProtocol: AnyObject {
+    func getNavigationController() -> UINavigationController?
+}

@@ -48,6 +48,7 @@
 		DF89041F2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
+		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD7D75F2CED529E00BA5D8B /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManagerTests.swift; sourceTree = "<group>"; };
+		DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */,
 				DF475C822CECFD00002B42AD /* Foundation */,
 				DF475C802CECF9D7002B42AD /* Double+Ext.swift */,
 				DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */,
@@ -623,6 +626,7 @@
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
 				DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */,
+				DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */,
 				DF0767A72CEB836A00196CE2 /* Viewable.swift in Sources */,
 				DF8903FA2CEA3D64009A0C99 /* NormalProductCell.swift in Sources */,
 				DF8903FB2CEA3D64009A0C99 /* SponsoredProductCell.swift in Sources */,
