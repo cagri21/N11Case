@@ -7,16 +7,20 @@
 
 import Foundation
 import NetworkProvider
+import UIKit
 
 protocol ProductsPresenterProtocol: AnyObject {
     func viewDidLoad()
     func fetchNextPage()
     func numberOfSections() -> Int
+    func sectionType(at index: Int) -> SectionType
     func numberOfItems(in section: Int) -> Int
     func product(at indexPath: IndexPath) -> ProductDisplayable
+    func didSelectProduct(_ product: ProductDisplayable)
 }
 
 class ProductsPresenter: ProductsPresenterProtocol {
+
     private weak var view: ProductsViewProtocol?
     private let interactor: ProductsInteractorProtocol
     private let router: ProductsRouterProtocol
@@ -62,6 +66,10 @@ class ProductsPresenter: ProductsPresenterProtocol {
             return products.count
         }
     }
+    
+    func sectionType(at section: Int) -> SectionType {
+        return sections[section]
+    }
 
     func product(at indexPath: IndexPath) -> ProductDisplayable {
         switch sections[indexPath.section] {
@@ -70,6 +78,14 @@ class ProductsPresenter: ProductsPresenterProtocol {
         case .products(let products):
             return products[indexPath.item]
         }
+    }
+
+    func didSelectProduct(_ product: ProductDisplayable) {
+        guard let view = view as? BaseViewController else {
+            return
+        }
+
+        router.navigateToDetail(from: view, with: product)
     }
 
 }

@@ -132,21 +132,16 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
 // swiftlint:disable no_grouping_extension
 extension ProductsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let productsPresenter = presenter as? ProductsPresenter else {
-            return UICollectionViewCell()
-        }
+        let sectionType = presenter.sectionType(at: indexPath.section)
+        let product = presenter.product(at: indexPath)
 
-        let section: SectionType = productsPresenter.sections[indexPath.section]
-
-        switch section {
+        switch sectionType {
         case .sponsored(let products):
             let cell: SponsoredProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            let product: ProductDisplayable = products[indexPath.item]
             cell.configure(with: product)
             return cell
         case .products(let products):
             let cell: NormalProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            let product: ProductDisplayable = products[indexPath.item]
             cell.configure(with: product)
             return cell
         }
@@ -154,64 +149,38 @@ extension ProductsViewController: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         let numberOfSection: Int = presenter.numberOfSections()
-        print("Number Of Section is \(numberOfSection)")
         return numberOfSection
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let numberOfItems: Int = presenter.numberOfItems(in: section)
-        print("Number Of Items is \(numberOfItems)")
         return numberOfItems
     }
-    
-    func collectionView(
-        _ collectionView: UICollectionView,
-        viewForSupplementaryElementOfKind kind: String,
-        at indexPath: IndexPath
-    ) -> UICollectionReusableView {
-        guard let productsPresenter = presenter as? ProductsPresenter else {
-            return UICollectionReusableView()
-        }
 
-        let section = productsPresenter.sections[indexPath.section]
-
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionType = presenter.sectionType(at: indexPath.section)
         // Check for Sponsored Section Footer
-        if kind == UICollectionView.elementKindSectionFooter, case .sponsored(let products) = section {
+        if kind == UICollectionView.elementKindSectionFooter, case .sponsored(let products) = sectionType {
             // Create and configure the pager view for the sponsored section
-            let pagerView = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind,
-                withReuseIdentifier: SectionPagerView.reuseIdentifier,
-                for: indexPath
-            ) as! SectionPagerView
+            let pagerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionPagerView.reuseIdentifier, for: indexPath) as! SectionPagerView
             pagerView.configure(with: products.count, currentPage: 0) // Start with the first page
             return pagerView
         }
 
         return UICollectionReusableView()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        guard let productsPresenter = presenter as? ProductsPresenter else {
-            return
-        }
+        let sectionType = presenter.sectionType(at: indexPath.section)
 
-        let section: SectionType = productsPresenter.sections[indexPath.section]
-
-        switch section {
-        case .sponsored(let products):
-            print("pata")
-            if let pagerView = productsCollectionView.supplementaryView(
-                            forElementKind: UICollectionView.elementKindSectionFooter,
-                            at: IndexPath(item: 0, section: 0)
-                        ) as? SectionPagerView {
-                pagerView.configure(with: products.count, currentPage: indexPath.row)
-                        }
-            return
-        case .products(_):
-            print("ata")
+        if case .sponsored(let products) = sectionType {
+                if let pagerView = productsCollectionView.supplementaryView(
+                    forElementKind: UICollectionView.elementKindSectionFooter,
+                    at: IndexPath(item: 0, section: indexPath.section)
+                ) as? SectionPagerView {
+                    pagerView.configure(with: products.count, currentPage: indexPath.row)
+            }
         }
     }
 }
 // swiftlint:enable no_grouping_extension
-

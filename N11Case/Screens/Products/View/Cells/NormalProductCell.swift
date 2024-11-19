@@ -37,7 +37,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
     func configure(with product: ProductDisplayable) {
         titleLabel.text = product.title
         if product.image.isEmpty {
-            
+
         } else {
             product.getImage { [weak self] Image in
                 guard let self = self else {

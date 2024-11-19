@@ -8,8 +8,7 @@
 import NetworkProvider
 import UIKit
 
-
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, Viewable {
 
     deinit {
         DLog("\(BaseViewController.self): deinitialized")
