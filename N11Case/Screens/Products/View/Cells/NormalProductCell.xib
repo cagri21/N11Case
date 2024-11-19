@@ -90,7 +90,6 @@
                 <outlet property="priceLabel" destination="dAB-wJ-ebb" id="ekl-g8-LPl"/>
                 <outlet property="productImageView" destination="gaT-Tq-bM5" id="0nG-VN-3yz"/>
                 <outlet property="rateView" destination="ni3-W5-NOH" id="MqH-KG-zCe"/>
-                <outlet property="sellerLabel" destination="hhI-hD-uYV" id="Dhe-1M-UNn"/>
                 <outlet property="titleLabel" destination="hbZ-Oo-zNI" id="ZGE-oh-bXW"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>

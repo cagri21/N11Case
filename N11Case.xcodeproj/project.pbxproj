@@ -24,6 +24,7 @@
 		DF475C962CED25C4002B42AD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C952CED25C4002B42AD /* Cosmos */; };
 		DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */; };
 		DF475C9C2CED2B5B002B42AD /* ScreenSizeAdjustingConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */; };
+		DF475CA32CED48DA002B42AD /* BaseProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475CA22CED48D6002B42AD /* BaseProductCell.swift */; };
 		DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = DF8903C62CEA38AD009A0C99 /* netfox */; };
 		DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */; };
 		DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */; };
@@ -79,6 +80,7 @@
 		DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeAdjustingConstraint.swift; sourceTree = "<group>"; };
 		DF475C9B2CED2B55002B42AD /* ScreenSizeAdjustingConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeAdjustingConstraintTests.swift; sourceTree = "<group>"; };
+		DF475CA22CED48D6002B42AD /* BaseProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProductCell.swift; sourceTree = "<group>"; };
 		DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
 		DF8903E32CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		DF8903E92CEA3D64009A0C99 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DF475CA22CED48D6002B42AD /* BaseProductCell.swift */,
 				DF8903E52CEA3D64009A0C99 /* NormalProductCell.swift */,
 				DF8903E62CEA3D64009A0C99 /* NormalProductCell.xib */,
 				DF8903E72CEA3D64009A0C99 /* SponsoredProductCell.swift */,
@@ -594,6 +597,7 @@
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
 				DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */,
 				DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */,
+				DF475CA32CED48DA002B42AD /* BaseProductCell.swift in Sources */,
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
 				DF0767A72CEB836A00196CE2 /* Viewable.swift in Sources */,
