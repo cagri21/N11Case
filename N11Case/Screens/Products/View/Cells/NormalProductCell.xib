@@ -46,6 +46,13 @@
                         <color key="textColor" name="ProductNormalPrice"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhI-hD-uYV">
+                        <rect key="frame" x="61" y="180.33333333333334" width="34" height="15.666666666666657"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" name="ProductTitle"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -54,10 +61,12 @@
             <constraints>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="top" secondItem="hbZ-Oo-zNI" secondAttribute="bottom" constant="3" id="CTl-0e-69T"/>
                 <constraint firstAttribute="trailing" secondItem="gaT-Tq-bM5" secondAttribute="trailing" id="Ge1-eE-Sc2"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="bottom" constant="5" id="Hvk-vW-Eei"/>
+                <constraint firstAttribute="bottom" secondItem="hhI-hD-uYV" secondAttribute="bottom" constant="4" id="Iyy-c4-rA3"/>
                 <constraint firstItem="hbZ-Oo-zNI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="KDF-qB-R2b"/>
+                <constraint firstAttribute="trailing" secondItem="hhI-hD-uYV" secondAttribute="trailing" constant="5" id="N0s-RB-D6k"/>
                 <constraint firstItem="gaT-Tq-bM5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O32-xB-Qc9"/>
                 <constraint firstItem="wxI-JY-Bh1" firstAttribute="leading" secondItem="dAB-wJ-ebb" secondAttribute="leading" id="WK8-vf-r48"/>
+                <constraint firstItem="hhI-hD-uYV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Z14-ii-He1"/>
                 <constraint firstItem="dAB-wJ-ebb" firstAttribute="leading" secondItem="hbZ-Oo-zNI" secondAttribute="leading" id="iBY-nP-NXU"/>
                 <constraint firstItem="hbZ-Oo-zNI" firstAttribute="top" secondItem="gaT-Tq-bM5" secondAttribute="bottom" constant="5" id="iQu-au-mio"/>
                 <constraint firstItem="wxI-JY-Bh1" firstAttribute="top" secondItem="dAB-wJ-ebb" secondAttribute="bottom" constant="3" id="k3V-hP-pF9"/>
@@ -65,11 +74,13 @@
                 <constraint firstItem="gaT-Tq-bM5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qfZ-48-Y5L"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hbZ-Oo-zNI" secondAttribute="trailing" constant="5" id="r18-ZP-CRo"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dAB-wJ-ebb" secondAttribute="trailing" constant="5" id="wAO-o3-f9Q"/>
+                <constraint firstItem="hhI-hD-uYV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wxI-JY-Bh1" secondAttribute="bottom" constant="5" id="wkW-L7-3xG"/>
             </constraints>
             <connections>
                 <outlet property="discountPriceLabel" destination="wxI-JY-Bh1" id="lq9-vv-dKH"/>
                 <outlet property="priceLabel" destination="dAB-wJ-ebb" id="ekl-g8-LPl"/>
                 <outlet property="productImageView" destination="gaT-Tq-bM5" id="0nG-VN-3yz"/>
+                <outlet property="sellerLabel" destination="hhI-hD-uYV" id="Dhe-1M-UNn"/>
                 <outlet property="titleLabel" destination="hbZ-Oo-zNI" id="ZGE-oh-bXW"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>

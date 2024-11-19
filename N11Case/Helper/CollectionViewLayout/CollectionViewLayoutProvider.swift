@@ -5,8 +5,9 @@
 //  Created by Çağrı Yörükoğlu on 16.11.2024.
 //
 
-import UIKit
 import NetworkProvider
+import UIKit
+
 
 final class CustomProductLayout {
     static func createLayout() -> UICollectionViewLayout {

@@ -20,7 +20,8 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var discountPriceLabel: UILabel!
-
+    @IBOutlet weak var sellerLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,6 +39,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
         titleLabel.text = nil
         priceLabel.text = nil
         discountPriceLabel.text = nil
+        sellerLabel.text = nil
 
         // Reset image view
         productImageView.image = nil
@@ -51,6 +53,7 @@ class NormalProductCell: UICollectionViewCell, ConfigurableCell {
     func configure(with product: Product) {
         titleLabel.text = product.title
         priceLabel.text = CurrencyFormatter.turkey.format(price: product.price)
+        sellerLabel.text = product.sellerName
 
         if let discountedPrice = product.instantDiscountPrice {
             discountPriceLabel.isHidden = false
