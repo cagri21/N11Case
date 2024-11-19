@@ -48,7 +48,7 @@ final class CustomProductLayout {
         let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .paging // Enables paging for one item per screen
         section.contentInsets = NSDirectionalEdgeInsets(
-            top: 0,
+            top: 50,
             leading: itemSpace / 2,
             bottom: 0,
             trailing: itemSpace / 2

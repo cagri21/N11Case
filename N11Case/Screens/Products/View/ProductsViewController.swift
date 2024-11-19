@@ -137,7 +137,7 @@ extension ProductsViewController: UICollectionViewDataSource {
         switch sectionType {
         case .sponsored(let products):
             let cell: SponsoredProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
-            cell.configure(with: product)
+            cell.configure(with: product as! SponsoredProduct)
             return cell
         case .products(let products):
             let cell: NormalProductCell = productsCollectionView.dequeueReusableCell(for: indexPath)
