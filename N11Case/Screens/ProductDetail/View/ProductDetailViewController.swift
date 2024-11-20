@@ -7,7 +7,23 @@
 
 import UIKit
 
-class ProductDetailViewController: BaseViewController {
+protocol ProductDetailViewProtocol: AnyObject {
+    func showLoading(_ isLoading: Bool)
+    func showProducts()
+    func showError(_ message: String)
+}
+
+class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol {
+
+    weak var presenter: ProductDetailPresenterProtocol!
+
+    init(presenter: ProductsPresenterProtocol?) {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +31,15 @@ class ProductDetailViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
+    func showLoading(_ isLoading: Bool) {
+        
+    }
+    
+    func showProducts() {
+        
+    }
+    
+    func showError(_ message: String) {
+
+    }
 }

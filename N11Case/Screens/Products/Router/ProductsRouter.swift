@@ -8,27 +8,36 @@
 import NetworkProvider
 import UIKit
 
-protocol ProductsRouterProtocol: AnyObject {
-    static func createModule() -> UIViewController
-    func navigateToDetail(from view: BaseViewController, with product: ProductDisplayable)
+protocol ProductsRouterProtocol: BaseRouterProtocol {
+    func navigateToDetail(from view: Viewable, with entity: ProductDisplayable)
 }
 
 final class ProductsRouter: ProductsRouterProtocol {
 
-    static func createModule() -> UIViewController {
-        let apiService: ProductsService = ProductsService()
+    private let apiService: ProductsServiceProtocol
+
+    init(apiService: ProductsServiceProtocol) {
+        self.apiService = apiService
+    }
+
+    func navigateToDetail(from view: Viewable, with entity: ProductDisplayable) {
+        let detailViewController: UIViewController = ProductDetailRouter.createModule(with: entity)
+        view.push(detailViewController, animated: true)
+    }
+
+    func createModule() -> UIViewController {
+        let productsEntity: ProductsEntity = ProductsEntity()
         let interactor: ProductsInteractor = ProductsInteractor(apiService: apiService)
-        let router: ProductsRouter = ProductsRouter()
-        let viewController: ProductsViewController = ProductsViewController(presenter: nil)
-        let presenter: ProductsPresenter = ProductsPresenter(view: viewController, interactor: interactor, router: router)
+        let router: ProductsRouter = self
+        let viewController: ProductsViewController = ProductsViewController()
+        let presenter: ProductsPresenter = ProductsPresenter(
+            view: viewController,
+            interactor: interactor,
+            router: router,
+            entity: productsEntity
+        )
         viewController.presenter = presenter
         interactor.presenter = presenter
         return viewController
     }
-
-    func navigateToDetail(from view: BaseViewController, with product: ProductDisplayable) {
-        let detailViewController: UIViewController = DetailRouter.createModule(with: product)
-        view.navigationController?.pushViewController(detailViewController, animated: true)
-    }
-
 }

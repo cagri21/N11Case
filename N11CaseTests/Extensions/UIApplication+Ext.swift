@@ -17,7 +17,6 @@ class UIApplicationExtensionsTests: XCTestCase {
 
     /// Test `getTopViewController` for a UINavigationController hierarchy
     func testGetTopViewControllerWithNavigationController() {
-        // Arrange
         let rootViewController = UIViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         let pushedViewController = UIViewController()
@@ -28,15 +27,12 @@ class UIApplicationExtensionsTests: XCTestCase {
         mockWindow.rootViewController = navigationController
         mockWindow.makeKeyAndVisible()
 
-        // Act
         let topViewController = UIApplication.shared.getTopViewController()
 
-        // Assert
         XCTAssertEqual(topViewController, pushedViewController, "The top view controller should navigation stack.")
     }
     /// Test `getTopViewController` for a UITabBarController hierarchy
     func testGetTopViewControllerWithTabBarController() {
-        // Arrange
         let firstViewController = UIViewController()
         let secondViewController = UIViewController()
         let tabBarController = UITabBarController()
@@ -48,7 +44,6 @@ class UIApplicationExtensionsTests: XCTestCase {
         mockWindow.rootViewController = tabBarController
         mockWindow.makeKeyAndVisible()
 
-        // Simulate adding the mock window to the first UIWindowScene
         let windowScene = UIApplication.shared.connectedScenes
             .first(where: { $0 is UIWindowScene }) as? UIWindowScene
 
@@ -60,16 +55,13 @@ class UIApplicationExtensionsTests: XCTestCase {
             (windows as? NSMutableArray)?.add(mockWindow) // Add the mock window to the scene's windows
         }
 
-        // Act
         let topViewController = UIApplication.shared.getTopViewController()
 
-        // Assert
         XCTAssertEqual(topViewController, secondViewController, "The top view controller should view  of the tab bar.")
     }
 
     /// Test `getTopViewController` for combined hierarchy (UINavigationController + UITabBarController)
     func testGetTopViewControllerWithCombinedHierarchy() {
-        // Arrange
         let tabBarController = UITabBarController()
         let navigationController = UINavigationController(rootViewController: UIViewController())
         tabBarController.viewControllers = [navigationController]
@@ -92,16 +84,13 @@ class UIApplicationExtensionsTests: XCTestCase {
             (windows as? NSMutableArray)?.add(mockWindow) // Add the mock window to the scene's windows
         }
 
-        // Act
         let topViewController = UIApplication.shared.getTopViewController()
 
-        // Assert
         XCTAssertEqual(topViewController, navigationController.visibleViewController, "")
     }
 
     /// Test `getTopViewController` with no window or rootViewController
     func testGetTopViewControllerWithNoWindowOrRootViewController() {
-        // Arrange
         // Simulate a situation where there are no windows in any active UIWindowScene
         let windowScene = UIApplication.shared.connectedScenes
             .first(where: { $0 is UIWindowScene }) as? UIWindowScene
@@ -111,10 +100,8 @@ class UIApplicationExtensionsTests: XCTestCase {
         // Hide all windows in the scene
         windowScene?.windows.forEach { $0.isHidden = true }
 
-        // Act
         let topViewController = UIApplication.shared.getTopViewController()
 
-        // Assert
         XCTAssertNil(topViewController, "")
     }
 }

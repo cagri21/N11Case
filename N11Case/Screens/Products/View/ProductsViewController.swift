@@ -8,11 +8,7 @@ import NetworkProvider
 import ProgressHUD
 import UIKit
 
-protocol ProductsViewProtocol: AnyObject {
-    func showLoading(_ isLoading: Bool)
-    func showProducts()
-    func showError(_ message: String)
-}
+protocol ProductsViewProtocol: BaseViewProtocol {}
 
 final class ProductsViewController: BaseViewController, ProductsViewProtocol, UICollectionViewDelegate {
     @IBOutlet var productsCollectionView: UICollectionView! {
@@ -33,16 +29,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
         }
     }
 
-    var presenter: ProductsPresenterProtocol!
-
-    init(presenter: ProductsPresenterProtocol?) {
-        self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    internal var presenter: ProductsPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +45,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
         }
     }
 
-    func showProducts() {
+    func showData() {
         DispatchQueue.main.async {
             self.productsCollectionView.reloadData()
         }
@@ -142,7 +129,7 @@ extension ProductsViewController: UICollectionViewDataSource {
             return
         }
 
-           // Trigger fade animation
+        // Trigger fade animation
         cell.animateFade { [weak self] in
             guard let self = self else {
                 DLog("\(ProductsViewController.self): Self couln't find in cell click animation.")

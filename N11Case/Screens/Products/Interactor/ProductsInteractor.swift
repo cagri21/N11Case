@@ -13,7 +13,7 @@ protocol ProductsInteractorProtocol: AnyObject {
 }
 
 final class ProductsInteractor: ProductsInteractorProtocol {
-    weak var presenter: ProductsInteractorOutputProtocol?
+    weak var presenter: (any ProductsInteractorOutputProtocol)?
     private let apiService: ProductsServiceProtocol
 
     init(apiService: ProductsServiceProtocol) {
@@ -27,15 +27,13 @@ final class ProductsInteractor: ProductsInteractorProtocol {
             }
             switch result {
             case .success(let response):
-                self.presenter?.didFetchProducts(response)
+                self.presenter?.didFetchData(response)
             case .failure(let error):
-                self.presenter?.didFailToFetchProducts(error)
+                self.presenter?.didFailToFetchData(error)
             }
         }
     }
 }
 
-protocol ProductsInteractorOutputProtocol: AnyObject {
-    func didFetchProducts(_ response: ProductsResponse)
-    func didFailToFetchProducts(_ error: Error)
+protocol ProductsInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductsResponse {
 }
