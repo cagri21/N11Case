@@ -19,6 +19,15 @@ class SectionPagerView: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupPageControl()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupPageControl()
+    }
+
+    private func setupPageControl() {
         addSubview(pageControl)
 
         NSLayoutConstraint.activate([
@@ -27,12 +36,14 @@ class SectionPagerView: UICollectionReusableView {
         ])
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     func configure(with numberOfPages: Int, currentPage: Int) {
         pageControl.numberOfPages = numberOfPages
         pageControl.currentPage = currentPage
+    }
+
+    /// Exposes page control configuration for testing purposes.
+    func getCurrentConfiguration() -> (numberOfPages: Int, currentPage: Int) {
+        let configuration: (numberOfPages: Int, currentPage: Int) = (numberOfPages: pageControl.numberOfPages, currentPage: pageControl.currentPage)
+        return configuration
     }
 }

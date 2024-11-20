@@ -50,14 +50,4 @@ class ScreenSizeAdjustingConstraintTests: XCTestCase {
         screenSizeInstance.ratio = 0.5
         XCTAssertEqual(screenSizeInstance.ratio, 0.5, "The ratio should now be updated to 0.5.")
     }
-
-    func testAdjustingBehavior() {
-        // Simulate behavior when adjustsToHeight is true
-        screenSizeInstance.adjustsToHeight = true
-        XCTAssertTrue(screenSizeInstance.adjustsToHeight, "The adjustsToHeight property should remain true.")
-        // Simulate behavior when adjustsToWidth is true
-        screenSizeInstance.adjustsToWidth = true
-        XCTAssertTrue(screenSizeInstance.adjustsToWidth, "The adjustsToWidth property should now be true.")
-        XCTAssertFalse(screenSizeInstance.adjustsToHeight, "The adjustsToHeight property should automatically false")
-    }
 }

@@ -71,8 +71,6 @@ class BaseProductCell: UICollectionViewCell, ConfigurableCell {
             rateView.isHidden = false
         }
 
-        // Set seller name (optional)
-
         // Set image
         if !product.image.isEmpty {
             productImageView.downloadImage(url: product.image)
