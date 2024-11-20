@@ -8,23 +8,15 @@
 import NetworkProvider
 import UIKit
 
-final class CustomProductLayout {
-    static func createLayout() -> UICollectionViewLayout {
-        return UICollectionViewCompositionalLayout { sectionIndex, environment in
-            if sectionIndex == 0 {
-                // Sponsored Products Section (Horizontal)
-                return CustomProductLayout.createSponsoredProductsSection(environment: environment)
-            } else {
-                // Normal Products Section (Vertical)
-                return CustomProductLayout.createNormalProductsSection(environment: environment)
-            }
-        }
-    }
+/// Protocol defining the layout creation behavior for different sections
+protocol SectionLayoutProvider {
+    func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
+}
 
-    private static func createSponsoredProductsSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-
+/// Layout provider for sponsored products section
+final class SponsoredProductsLayoutProvider: SectionLayoutProvider {
+    func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let itemSpace: CGFloat = 10
-
         let containerWidth: CGFloat = environment.container.contentSize.width - itemSpace
         let containerHeight: CGFloat = environment.container.contentSize.height / 4
 
@@ -64,10 +56,11 @@ final class CustomProductLayout {
 
         return section
     }
+}
 
-    private static func createNormalProductsSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-
-        // Calculate the width for two items
+/// Layout provider for normal products section
+final class NormalProductsLayoutProvider: SectionLayoutProvider {
+    func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let totalWidth: CGFloat = environment.container.contentSize.width
         let spacing: CGFloat = 10 // Space between items and edges
         let itemWidth: CGFloat = (totalWidth - (3 * spacing)) / 2 // Subtract 3 spacings (1 for leading, 1 for middle, 1 for trailing)
@@ -100,7 +93,27 @@ final class CustomProductLayout {
     }
 }
 
-/// Protocol for layout providing, adhering to DIP
+/// Protocol for layout providers
 protocol CollectionViewLayoutProvider {
-    func createLayout(hasSponsoredSection: Bool) -> UICollectionViewLayout
+    func createLayout() -> UICollectionViewLayout
+}
+
+/// Concrete layout provider implementation
+final class CustomProductLayoutProvider: CollectionViewLayoutProvider {
+    private let sponsoredSectionProvider: SectionLayoutProvider
+    private let normalSectionProvider: SectionLayoutProvider
+
+    init(sponsoredSectionProvider: SectionLayoutProvider = SponsoredProductsLayoutProvider(),
+         normalSectionProvider: SectionLayoutProvider = NormalProductsLayoutProvider()) {
+        self.sponsoredSectionProvider = sponsoredSectionProvider
+        self.normalSectionProvider = normalSectionProvider
+    }
+
+    func createLayout() -> UICollectionViewLayout {
+        UICollectionViewCompositionalLayout { sectionIndex, environment in
+            sectionIndex == 0
+                ? self.sponsoredSectionProvider.createSection(environment: environment)
+                : self.normalSectionProvider.createSection(environment: environment)
+        }
+    }
 }

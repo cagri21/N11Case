@@ -28,7 +28,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                     withReuseIdentifier: SectionPagerView().className
                 )
-            let layout: UICollectionViewLayout = CustomProductLayout.createLayout()
+            let layout: UICollectionViewLayout = CustomProductLayoutProvider().createLayout()
             productsCollectionView.setCollectionViewLayout(layout, animated: true)
         }
     }
