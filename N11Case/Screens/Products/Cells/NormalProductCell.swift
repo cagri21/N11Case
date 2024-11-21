@@ -24,7 +24,7 @@ final class NormalProductCell: BaseProductCell {
         rateView.settings.starSize = 15
 
         guard let product = product as? Product else {
-            DLog("\(UserDefaults.self): Invalid product type.")
+            Logger.error("Invalid product type.")
             return
         }
         sellerLabel.text = product.sellerName

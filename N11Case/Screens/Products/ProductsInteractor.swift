@@ -27,6 +27,7 @@ final class ProductsInteractor: ProductsInteractorProtocol {
     func fetchProducts(page: Int) {
         apiService.fetchProducts(page: page, parameters: nil) { [weak self] result in
             guard let self = self else {
+                Logger.warning("Self couldn't find")
                 return
             }
             switch result {

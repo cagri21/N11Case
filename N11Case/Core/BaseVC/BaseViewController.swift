@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController, Viewable {
 
     deinit {
-        DLog("\(BaseViewController.self): deinitialized")
+        Logger.debug("deinitialized")
     }
 
     override func viewDidLoad() {

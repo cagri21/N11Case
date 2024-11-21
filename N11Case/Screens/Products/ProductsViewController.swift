@@ -4,7 +4,7 @@
 //
 //  Created by Çağrı Yörükoğlu on 15.11.2024.
 //
-import NetworkProvider
+
 import ProgressHUD
 import UIKit
 

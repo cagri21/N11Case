@@ -24,14 +24,14 @@ extension ProductsViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else {
-            DLog("\(ProductsViewController.self): cell couln't find in cell at didSelectItemAt.")
+            Logger.warning("Cell couln't find in cell at didSelectItemAt.")
             return
         }
 
         // Trigger fade animation
         cell.animateFade { [weak self] in
             guard let self = self else {
-                DLog("\(ProductsViewController.self): Self couln't find in cell click animation.")
+                Logger.warning("Self couln't find in cell click animation.")
                 return
             }
             // Get the selected product

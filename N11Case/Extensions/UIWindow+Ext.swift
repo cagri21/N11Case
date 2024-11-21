@@ -14,7 +14,7 @@ extension UIWindow {
         super.motionBegan(motion, with: event)
 
         guard motion == UIEvent.EventSubtype.motionShake else {
-            DLog("\(AppDelegate.self): Unable to find UIEvent.EventSubtype.motionShake")
+            Logger.error("Unable to find UIEvent.EventSubtype.motionShak")
             return
         }
 

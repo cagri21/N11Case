@@ -43,6 +43,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 
     func fetchNextPage() {
         guard !isLoading, interactor.entity.pagination.hasNextPage else {
+            Logger.warning("fetchNextPage couldn't pass.")
             return
         }
         isLoading = true
@@ -79,7 +80,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 
     func didSelectProduct(_ product: ProductDisplayable) {
         guard let view = view as? BaseViewController else {
-            DLog("\(ProductsPresenter.self): View couldn't find at presenter in didSelectProduct.")
+            Logger.debug("View couldn't find at presenter in didSelectProduct.")
             return
         }
 

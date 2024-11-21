@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import NetworkProvider
 
 extension UILabel {
     func strikeThrough(_ isStrikeThrough: Bool) {
         guard let labelText = self.text, !labelText.isEmpty else {
+            Logger.warning("Error: Unable to dequeue UICollectionViewCell with identifier")
             self.attributedText = nil
             return
         }
