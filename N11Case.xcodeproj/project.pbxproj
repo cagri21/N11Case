@@ -14,7 +14,6 @@
 		DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */; };
 		DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */; };
 		DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */; };
-		DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF1DD3C82CEF693C0002992E /* NetworkProvider */; };
 		DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */; };
 		DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */; };
 		DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C802CECF9D7002B42AD /* Double+Ext.swift */; };
@@ -59,11 +58,11 @@
 		DFB0B4A42CEEA1B6005BA37A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */; };
 		DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */; };
 		DFB0B4A92CEED372005BA37A /* ProductsView+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionDataExt.swift */; };
-		DFB8026C2CEFC122004FB9BA /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DFB8026B2CEFC122004FB9BA /* NetworkProvider */; };
 		DFB802702CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB8026F2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib */; };
 		DFB802712CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */; };
 		DFB802752CEFDB5F004FB9BA /* ProductDetail+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */; };
 		DFB802772CEFDB71004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802762CEFDB6D004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift */; };
+		DFB8027A2CEFEECD004FB9BA /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DFB802792CEFEECD004FB9BA /* NetworkProvider */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
@@ -145,7 +144,6 @@
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFB802692CEFC0C4004FB9BA /* NetworkProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkProvider; path = ../NetworkProvider; sourceTree = SOURCE_ROOT; };
 		DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		DFB8026F2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetail+CollectionDataExt.swift"; sourceTree = "<group>"; };
@@ -166,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB8026C2CEFC122004FB9BA /* NetworkProvider in Frameworks */,
+				DFB8027A2CEFEECD004FB9BA /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
@@ -231,48 +229,16 @@
 		DF0767AA2CEB856100196CE2 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
-				DF0767B12CEB85DC00196CE2 /* View */,
-				DF0767B22CEB85F500196CE2 /* Interactor */,
-				DF0767B02CEB85D600196CE2 /* Presenter */,
-				DFB0B4A52CEECFF3005BA37A /* Entity */,
-				DF0767AF2CEB85D000196CE2 /* Router */,
-			);
-			path = ProductDetail;
-			sourceTree = "<group>";
-		};
-		DF0767AF2CEB85D000196CE2 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		DF0767B02CEB85D600196CE2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
 				DFB0B4922CEE3849005BA37A /* ProductDetailPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DF0767B12CEB85DC00196CE2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DFB802722CEFDB3A004FB9BA /* ProductDetail+Ext */,
-				DFB8026D2CEFCCCD004FB9BA /* Cell */,
+				DFB0B4902CEE36D3005BA37A /* ProductDetailInteractor.swift */,
+				DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */,
+				DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */,
 				DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */,
 				DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */,
+				DFB8026D2CEFCCCD004FB9BA /* Cell */,
+				DFB802722CEFDB3A004FB9BA /* ProductDetail+Ext */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DF0767B22CEB85F500196CE2 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				DFB0B4902CEE36D3005BA37A /* ProductDetailInteractor.swift */,
-			);
-			path = Interactor;
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		DF475C822CECFD00002B42AD /* Foundation */ = {
@@ -370,11 +336,14 @@
 		DF8903EF2CEA3D64009A0C99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF8904202CEA78E4009A0C99 /* View */,
-				DF8904232CEA78FE009A0C99 /* Interactor */,
-				DF8904212CEA78E8009A0C99 /* Presenter */,
-				DFB0B4942CEE47E6005BA37A /* Entity */,
-				DF8904222CEA78F8009A0C99 /* Router */,
+				DF8903EB2CEA3D64009A0C99 /* ProductsPresenter.swift */,
+				DF8903EA2CEA3D64009A0C99 /* ProductsInteractor.swift */,
+				DFB0B4952CEE47EA005BA37A /* ProductsEntity.swift */,
+				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
+				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
+				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
+				DF8903E92CEA3D64009A0C99 /* Cells */,
+				DFB0B4AA2CEED3CC005BA37A /* ProductView+Ext */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -382,7 +351,6 @@
 		DF8903F62CEA3D64009A0C99 /* N11Case */ = {
 			isa = PBXGroup;
 			children = (
-				DFB802692CEFC0C4004FB9BA /* NetworkProvider */,
 				DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */,
 				DF8903F32CEA3D64009A0C99 /* Info.plist */,
 				DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */,
@@ -434,41 +402,6 @@
 			path = N11CaseUITests;
 			sourceTree = "<group>";
 		};
-		DF8904202CEA78E4009A0C99 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DFB0B4AA2CEED3CC005BA37A /* ProductView+Ext */,
-				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
-				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
-				DF8903E92CEA3D64009A0C99 /* Cells */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DF8904212CEA78E8009A0C99 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				DF8903EB2CEA3D64009A0C99 /* ProductsPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DF8904222CEA78F8009A0C99 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		DF8904232CEA78FE009A0C99 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				DF8903EA2CEA3D64009A0C99 /* ProductsInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		DFB0B48B2CED97A4005BA37A /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,28 +410,12 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		DFB0B4942CEE47E6005BA37A /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				DFB0B4952CEE47EA005BA37A /* ProductsEntity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		DFB0B4972CEE4C4F005BA37A /* BasePagination */ = {
 			isa = PBXGroup;
 			children = (
 				DFB0B4992CEE4C60005BA37A /* BasePagination.swift */,
 			);
 			path = BasePagination;
-			sourceTree = "<group>";
-		};
-		DFB0B4A52CEECFF3005BA37A /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		DFB0B4AA2CEED3CC005BA37A /* ProductView+Ext */ = {
@@ -611,7 +528,7 @@
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
-				DFB8026B2CEFC122004FB9BA /* NetworkProvider */,
+				DFB802792CEFEECD004FB9BA /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -693,6 +610,7 @@
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -1177,6 +1095,14 @@
 				minimumVersion = 1.21.0;
 			};
 		};
+		DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cagri21/NetworkProvider";
+			requirement = {
+				branch = "feature_/viper-case-study";
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1195,8 +1121,9 @@
 			package = DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
 		};
-		DFB8026B2CEFC122004FB9BA /* NetworkProvider */ = {
+		DFB802792CEFEECD004FB9BA /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
 		};
 /* End XCSwiftPackageProductDependency section */
