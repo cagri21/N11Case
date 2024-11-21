@@ -14,7 +14,7 @@
 		DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */; };
 		DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */; };
 		DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */; };
-		DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF1DD3C82CEF693C0002992E /* NetworkProvider */; };
+		DF1DD3CD2CEF747E0002992E /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF1DD3CC2CEF747E0002992E /* NetworkProvider */; };
 		DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */; };
 		DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */; };
 		DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C802CECF9D7002B42AD /* Double+Ext.swift */; };
@@ -93,6 +93,7 @@
 		DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailViewController.xib; sourceTree = "<group>"; };
 		DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		DF1DD3CA2CEF74740002992E /* NetworkProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkProvider; path = ../NetworkProvider; sourceTree = SOURCE_ROOT; };
 		DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
 		DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		DF475C802CECF9D7002B42AD /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
@@ -154,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */,
+				DF1DD3CD2CEF747E0002992E /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
@@ -259,6 +260,13 @@
 				DFB0B4902CEE36D3005BA37A /* ProductDetailInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DF1DD3CB2CEF747E0002992E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DF475C822CECFD00002B42AD /* Foundation */ = {
@@ -368,6 +376,7 @@
 		DF8903F62CEA3D64009A0C99 /* N11Case */ = {
 			isa = PBXGroup;
 			children = (
+				DF1DD3CA2CEF74740002992E /* NetworkProvider */,
 				DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */,
 				DF8903F32CEA3D64009A0C99 /* Info.plist */,
 				DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */,
@@ -500,6 +509,7 @@
 				DF8903F62CEA3D64009A0C99 /* N11Case */,
 				DF8904192CEA5EE5009A0C99 /* N11CaseTests */,
 				DF89041D2CEA5EF3009A0C99 /* N11CaseUITests */,
+				DF1DD3CB2CEF747E0002992E /* Frameworks */,
 				DFB17D2A2CE7608000839DA3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -569,7 +579,7 @@
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
-				DF1DD3C82CEF693C0002992E /* NetworkProvider */,
+				DF1DD3CC2CEF747E0002992E /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -651,7 +661,6 @@
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
-				DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -1115,14 +1124,6 @@
 				minimumVersion = 14.1.3;
 			};
 		};
-		DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cagri21/NetworkProvider";
-			requirement = {
-				branch = "feature_/viper-case-study";
-				kind = branch;
-			};
-		};
 		DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos";
@@ -1147,9 +1148,8 @@
 			package = DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
 		};
-		DF1DD3C82CEF693C0002992E /* NetworkProvider */ = {
+		DF1DD3CC2CEF747E0002992E /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
 		};
 		DF475C952CED25C4002B42AD /* Cosmos */ = {

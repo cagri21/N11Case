@@ -5,6 +5,7 @@
 //  Created by Çağrı Yörükoğlu on 18.11.2024.
 //
 
+import ProgressHUD
 import UIKit
 
 protocol ProductDetailViewProtocol: BaseViewProtocol {}
@@ -20,14 +21,18 @@ class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol
     }
 
     func showLoading(_ isLoading: Bool) {
-
+        if isLoading {
+            ProgressHUD.animationType = .activityIndicator
+            ProgressHUD.animate("Please wait...")
+        } else {
+            ProgressHUD.dismiss()
+        }
     }
-    
+
     func showData() {
-        print("data")
     }
-    
-    func showError(_ message: String) {
 
+    func showError(_ message: String) {
+        AlertPresenter().presentAlert(title: Alert.errorTitle, message: message)
     }
 }

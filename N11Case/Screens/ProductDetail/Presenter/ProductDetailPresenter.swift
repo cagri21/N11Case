@@ -42,9 +42,9 @@ extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
         view?.showData()
     }
 
-    func didFailToFetchData(_ error: any Error) {
+    func didFailToFetchData(_ errorMessage: String) {
         isLoading = false
-        view?.showError("Failed to load products")
+        view?.showError(errorMessage)
     }
 
 }
