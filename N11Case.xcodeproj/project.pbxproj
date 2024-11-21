@@ -59,6 +59,11 @@
 		DFB0B4A42CEEA1B6005BA37A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */; };
 		DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */; };
 		DFB0B4A92CEED372005BA37A /* ProductsView+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionDataExt.swift */; };
+		DFB8026C2CEFC122004FB9BA /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DFB8026B2CEFC122004FB9BA /* NetworkProvider */; };
+		DFB802702CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB8026F2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib */; };
+		DFB802712CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */; };
+		DFB802752CEFDB5F004FB9BA /* ProductDetail+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */; };
+		DFB802772CEFDB71004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802762CEFDB6D004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
@@ -140,6 +145,11 @@
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB802692CEFC0C4004FB9BA /* NetworkProvider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkProvider; path = ../NetworkProvider; sourceTree = SOURCE_ROOT; };
+		DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		DFB8026F2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetail+CollectionDataExt.swift"; sourceTree = "<group>"; };
+		DFB802762CEFDB6D004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsDetail+CollectionDelegateExt.swift.swift"; sourceTree = "<group>"; };
 		DFD7D75F2CED529E00BA5D8B /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManagerTests.swift; sourceTree = "<group>"; };
 		DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -156,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */,
+				DFB8026C2CEFC122004FB9BA /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
@@ -249,6 +259,8 @@
 		DF0767B12CEB85DC00196CE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DFB802722CEFDB3A004FB9BA /* ProductDetail+Ext */,
+				DFB8026D2CEFCCCD004FB9BA /* Cell */,
 				DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */,
 				DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */,
 			);
@@ -370,6 +382,7 @@
 		DF8903F62CEA3D64009A0C99 /* N11Case */ = {
 			isa = PBXGroup;
 			children = (
+				DFB802692CEFC0C4004FB9BA /* NetworkProvider */,
 				DF8903F12CEA3D64009A0C99 /* AppDelegate.swift */,
 				DF8903F32CEA3D64009A0C99 /* Info.plist */,
 				DF8903F52CEA3D64009A0C99 /* LaunchScreen.storyboard */,
@@ -503,6 +516,7 @@
 				DF8903F62CEA3D64009A0C99 /* N11Case */,
 				DF8904192CEA5EE5009A0C99 /* N11CaseTests */,
 				DF89041D2CEA5EF3009A0C99 /* N11CaseUITests */,
+				DFB8026A2CEFC122004FB9BA /* Frameworks */,
 				DFB17D2A2CE7608000839DA3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -515,6 +529,31 @@
 				DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DFB8026A2CEFC122004FB9BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFB8026D2CEFCCCD004FB9BA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */,
+				DFB8026F2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DFB802722CEFDB3A004FB9BA /* ProductDetail+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				DFB802762CEFDB6D004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift */,
+				DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */,
+			);
+			path = "ProductDetail+Ext";
 			sourceTree = "<group>";
 		};
 		DFD7D75D2CED4E8A00BA5D8B /* UIComponents */ = {
@@ -572,7 +611,7 @@
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
-				DF1DD3C82CEF693C0002992E /* NetworkProvider */,
+				DFB8026B2CEFC122004FB9BA /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -654,7 +693,6 @@
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
-				DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -675,6 +713,7 @@
 			files = (
 				DF8904012CEA3D64009A0C99 /* NormalProductCell.xib in Resources */,
 				DF8904022CEA3D64009A0C99 /* SponsoredProductCell.xib in Resources */,
+				DFB802702CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.xib in Resources */,
 				DF8904032CEA3D64009A0C99 /* ProductsViewController.xib in Resources */,
 				DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */,
 				DF8904112CEA5EAB009A0C99 /* Colors.xcassets in Resources */,
@@ -761,10 +800,13 @@
 				DF0767A32CEB7C7400196CE2 /* SectionPagerView.swift in Sources */,
 				DF8903FE2CEA3D64009A0C99 /* ProductsRouter.swift in Sources */,
 				DFB0B4932CEE384D005BA37A /* ProductDetailPresenter.swift in Sources */,
+				DFB802752CEFDB5F004FB9BA /* ProductDetail+CollectionDataExt.swift in Sources */,
 				DFD7D76F2CED8B1800BA5D8B /* UIApplication+Ext.swift in Sources */,
+				DFB802712CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift in Sources */,
 				DF8903FF2CEA3D64009A0C99 /* ProductsViewController.swift in Sources */,
 				DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */,
 				DF8904002CEA3D64009A0C99 /* AppDelegate.swift in Sources */,
+				DFB802772CEFDB71004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,14 +1161,6 @@
 				minimumVersion = 14.1.3;
 			};
 		};
-		DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cagri21/NetworkProvider";
-			requirement = {
-				branch = "feature_/viper-case-study";
-				kind = branch;
-			};
-		};
 		DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos";
@@ -1151,11 +1185,6 @@
 			package = DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
 		};
-		DF1DD3C82CEF693C0002992E /* NetworkProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */;
-			productName = NetworkProvider;
-		};
 		DF475C952CED25C4002B42AD /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */;
@@ -1165,6 +1194,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
+		};
+		DFB8026B2CEFC122004FB9BA /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkProvider;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
