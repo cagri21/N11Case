@@ -8,8 +8,13 @@ import NetworkProvider
 
 struct ProductDetailEntity {
     let product: ProductDisplayable
+    var productDetail: ProductResponse?
 
     init(product: ProductDisplayable) {
         self.product = product
+    }
+
+    mutating func updateProductDetail(with response: ProductResponse) {
+           self.productDetail = response
     }
 }

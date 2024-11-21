@@ -15,7 +15,7 @@ protocol ProductsInteractorProtocol: BaseInteractorProtocol where Entity == Prod
 final class ProductsInteractor: ProductsInteractorProtocol {
     weak var presenter: (any ProductsInteractorOutputProtocol)?
     private let apiService: ProductsServiceProtocol
-    private var entity: ProductsEntity
+    private(set) var entity: ProductsEntity
     private let errorHandlingService: ErrorHandlingServiceProtocol
 
     init(apiService: ProductsServiceProtocol, entity: ProductsEntity, errorHandlingService: ErrorHandlingServiceProtocol) {
@@ -39,14 +39,9 @@ final class ProductsInteractor: ProductsInteractorProtocol {
         }
     }
 
-    func getEntity() -> ProductsEntity {
-        let entity: ProductsEntity = entity
-        return entity
-    }
-
     private func processResponse(_ response: ProductsResponse) {
         entity.addProducts(response: response)
-        presenter?.didFetchData(entity)
+        presenter?.didFetchData()
     }
 }
 

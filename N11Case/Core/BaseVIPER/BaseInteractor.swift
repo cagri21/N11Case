@@ -7,11 +7,12 @@
 
 protocol BaseInteractorOutputProtocol: AnyObject {
     associatedtype Response
-    func didFetchData(_ response: Response)
+    func didFetchData()
     func didFailToFetchData(_ errorMessage: String)
 }
 
 protocol BaseInteractorProtocol: AnyObject {
     associatedtype Entity
-    func getEntity() -> Entity
+
+    var entity: Entity { get }
 }

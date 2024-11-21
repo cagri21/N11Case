@@ -12,7 +12,7 @@ protocol ProductDetailPresenterProtocol: BasePresenterProtocol { }
 final class ProductDetailPresenter: ProductDetailPresenterProtocol {
 
     private weak var view: ProductDetailViewProtocol?
-    private let interactor: ProductDetailInteractorProtocol
+    private let interactor: any ProductDetailInteractorProtocol
     private let router: ProductDetailRouterProtocol
 
     private var isLoading: Bool = false {
@@ -35,7 +35,7 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
 }
 // swiftlint:disable no_grouping_extension
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
-    func didFetchData(_ response: ProductResponse) {
+    func didFetchData() {
         isLoading = false
         view?.showData()
     }

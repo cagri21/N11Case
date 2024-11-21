@@ -38,24 +38,24 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 
     func viewDidLoad() {
         isLoading = true
-        interactor.fetchProducts(page: interactor.getEntity().pagination.currentPage)
+        interactor.fetchProducts(page: interactor.entity.pagination.currentPage)
     }
 
     func fetchNextPage() {
-        guard !isLoading, interactor.getEntity().pagination.hasNextPage else {
+        guard !isLoading, interactor.entity.pagination.hasNextPage else {
             return
         }
         isLoading = true
-        interactor.fetchProducts(page: interactor.getEntity().pagination.currentPage)
+        interactor.fetchProducts(page: interactor.entity.pagination.currentPage)
     }
 
     func numberOfSections() -> Int {
-        let sectionsCount: Int = interactor.getEntity().sections.count
+        let sectionsCount: Int = interactor.entity.sections.count
         return sectionsCount
     }
 
     func numberOfItems(in section: Int) -> Int {
-        switch interactor.getEntity().sections[section] {
+        switch interactor.entity.sections[section] {
         case .sponsored(let products):
             return products.count
         case .products(let products):
@@ -64,12 +64,12 @@ final class ProductsPresenter: ProductsPresenterProtocol {
     }
 
     func sectionType(at section: Int) -> SectionType {
-        let sectionType: SectionType = interactor.getEntity().sections[section]
+        let sectionType: SectionType = interactor.entity.sections[section]
         return sectionType
     }
 
     func product(at indexPath: IndexPath) -> ProductDisplayable {
-        switch interactor.getEntity().sections[indexPath.section] {
+        switch interactor.entity.sections[indexPath.section] {
         case .sponsored(let products):
             return products[indexPath.item]
         case .products(let products):
@@ -89,7 +89,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 }
 // swiftlint:disable no_grouping_extension
 extension ProductsPresenter: ProductsInteractorOutputProtocol {
-    func didFetchData(_ response: ProductsEntity) {
+    func didFetchData() {
         isLoading = false
         view?.showData()
     }
