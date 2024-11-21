@@ -94,9 +94,9 @@ extension ProductsPresenter: ProductsInteractorOutputProtocol {
         view?.showData()
     }
 
-    func didFailToFetchData(_ error: any Error) {
+    func didFailToFetchData(_ errorMessage: String) {
         isLoading = false
-        view?.showError("Failed to load products")
+        view?.showError(errorMessage)
     }
 }
 // swiftlint:enable no_grouping_extension
