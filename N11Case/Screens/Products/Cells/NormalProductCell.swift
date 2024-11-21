@@ -7,7 +7,6 @@
 
 import Cosmos
 import NetworkProvider
-import SDWebImage
 import UIKit
 
 final class NormalProductCell: BaseProductCell {
@@ -31,11 +30,3 @@ final class NormalProductCell: BaseProductCell {
     }
 }
 
-extension UIImageView{
-    func downloadImage(url:String){
-      //remove space if a url contains.
-        let stringWithoutWhitespace = url.replacingOccurrences(of: " ", with: "%20", options: .regularExpression)
-        self.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        self.sd_setImage(with: URL(string: stringWithoutWhitespace), placeholderImage: UIImage())
-    }
-}

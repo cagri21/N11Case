@@ -7,7 +7,6 @@
 
 import Foundation
 import NetworkProvider
-import UIKit
 
 protocol ProductsPresenterProtocol: BasePresenterProtocol {
     func fetchNextPage()

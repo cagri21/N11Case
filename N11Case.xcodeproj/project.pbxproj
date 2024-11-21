@@ -62,7 +62,6 @@
 		DFB802712CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB8026E2CEFCD6A004FB9BA /* ProductDetailCollectionViewCell.swift */; };
 		DFB802752CEFDB5F004FB9BA /* ProductDetail+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802742CEFDB55004FB9BA /* ProductDetail+CollectionDataExt.swift */; };
 		DFB802772CEFDB71004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB802762CEFDB6D004FB9BA /* ProductsDetail+CollectionDelegateExt.swift.swift */; };
-		DFB8027A2CEFEECD004FB9BA /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DFB802792CEFEECD004FB9BA /* NetworkProvider */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
@@ -72,6 +71,8 @@
 		DFD7D76D2CED89E100BA5D8B /* SectionPagerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D76C2CED89DC00BA5D8B /* SectionPagerViewTests.swift */; };
 		DFD7D76F2CED8B1800BA5D8B /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D76E2CED8B1300BA5D8B /* UIApplication+Ext.swift */; };
 		DFD7D7722CED8B5900BA5D8B /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7712CED8B4F00BA5D8B /* UIApplication+Ext.swift */; };
+		DFE0B9F52CEFF636007B16BB /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DFE0B9F42CEFF636007B16BB /* NetworkProvider */; };
+		DFE0B9F72CEFF84B007B16BB /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0B9F62CEFF846007B16BB /* UIImage+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		DFD7D76C2CED89DC00BA5D8B /* SectionPagerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPagerViewTests.swift; sourceTree = "<group>"; };
 		DFD7D76E2CED8B1300BA5D8B /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		DFD7D7712CED8B4F00BA5D8B /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		DFE0B9F62CEFF846007B16BB /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB8027A2CEFEECD004FB9BA /* NetworkProvider in Frameworks */,
+				DFE0B9F52CEFF636007B16BB /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
@@ -301,7 +303,7 @@
 		DF8903E22CEA3D64009A0C99 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DF475C822CECFD00002B42AD /* Foundation */,
+				DFE0B9F62CEFF846007B16BB /* UIImage+Ext.swift */,
 				DFD7D76E2CED8B1300BA5D8B /* UIApplication+Ext.swift */,
 				DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */,
 				DF475C802CECF9D7002B42AD /* Double+Ext.swift */,
@@ -309,6 +311,7 @@
 				DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */,
 				DF8903E02CEA3D64009A0C99 /* UICollectionView+Ext.swift */,
 				DF8903E12CEA3D64009A0C99 /* UIWindow+Ext.swift */,
+				DF475C822CECFD00002B42AD /* Foundation */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -528,7 +531,7 @@
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
-				DFB802792CEFEECD004FB9BA /* NetworkProvider */,
+				DFE0B9F42CEFF636007B16BB /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -610,7 +613,7 @@
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
-				DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */,
+				DFE0B9F32CEFF636007B16BB /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -705,6 +708,7 @@
 				DF0767992CEB5BB200196CE2 /* BaseViewController.swift in Sources */,
 				DF8903F92CEA3D64009A0C99 /* CollectionViewLayoutProvider.swift in Sources */,
 				DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */,
+				DFE0B9F72CEFF84B007B16BB /* UIImage+Ext.swift in Sources */,
 				DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */,
 				DF0767A72CEB836A00196CE2 /* Viewable.swift in Sources */,
 				DF8903FA2CEA3D64009A0C99 /* NormalProductCell.swift in Sources */,
@@ -1095,7 +1099,7 @@
 				minimumVersion = 1.21.0;
 			};
 		};
-		DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
+		DFE0B9F32CEFF636007B16BB /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cagri21/NetworkProvider";
 			requirement = {
@@ -1121,9 +1125,9 @@
 			package = DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */;
 			productName = netfox;
 		};
-		DFB802792CEFEECD004FB9BA /* NetworkProvider */ = {
+		DFE0B9F42CEFF636007B16BB /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFB802782CEFEECD004FB9BA /* XCRemoteSwiftPackageReference "NetworkProvider" */;
+			package = DFE0B9F32CEFF636007B16BB /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
 		};
 /* End XCSwiftPackageProductDependency section */

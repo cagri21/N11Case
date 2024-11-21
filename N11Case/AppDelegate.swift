@@ -62,8 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func createProductModule() -> UINavigationController {
         // Create an instance of ProductsRouter with the required dependency
-        let apiService: ProductsService = ProductsService() // Replace with your actual ProductsService implementation
-        let productsRouter: ProductsRouter = ProductsRouter(apiService: apiService)
+        let productsRouter: ProductsRouter = ProductsRouter()
 
                 // Use the router to create the initial Products module
         let productsViewController: UIViewController = productsRouter.createModule()

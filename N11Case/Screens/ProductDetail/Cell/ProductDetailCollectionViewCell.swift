@@ -21,7 +21,7 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     func configure(with image: String) {
         // Set image
         if !image.isEmpty {
-            productImage.downloadImage(url: image)
+            productImage.setImage(url: image, placeholder: UIImage(named: "product-placeholder") ?? UIImage(), fallbackImage: UIImage(named: "product-placeholder") ?? UIImage())
         }
     }
 }

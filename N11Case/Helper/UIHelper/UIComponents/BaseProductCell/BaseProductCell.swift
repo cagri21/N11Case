@@ -73,7 +73,9 @@ class BaseProductCell: UICollectionViewCell, ConfigurableCell {
 
         // Set image
         if !product.image.isEmpty {
-            productImageView.downloadImage(url: product.image)
+            productImageView.setImage(url: product.image)
+        } else {
+            productImageView.image = UIImage(named: "product-placeholder")
         }
     }
 }
