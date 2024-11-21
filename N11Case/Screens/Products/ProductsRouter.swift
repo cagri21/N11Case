@@ -14,18 +14,17 @@ protocol ProductsRouterProtocol: BaseRouterProtocol {
 
 final class ProductsRouter: ProductsRouterProtocol {
 
-    private let apiService: ProductsServiceProtocol
-
-    init(apiService: ProductsServiceProtocol) {
-        self.apiService = apiService
+    init() {
     }
 
     func navigateToDetail(from view: Viewable, with entity: ProductDisplayable) {
+        let apiService: ProductsService = ProductsService()
         let detailViewController: UIViewController = ProductDetailRouter().createModule(with: entity, apiService: apiService)
         view.push(detailViewController, animated: true)
     }
 
     func createModule() -> UIViewController {
+        let apiService: ProductsService = ProductsService()
         let productsEntity: ProductsEntity = ProductsEntity()
         let errorService: ErrorHandlingServiceProtocol = ErrorHandlingService()
         let interactor: ProductsInteractor = ProductsInteractor(apiService: apiService, entity: productsEntity, errorHandlingService: errorService)
