@@ -35,5 +35,4 @@ final class ProductsInteractor: ProductsInteractorProtocol {
     }
 }
 
-protocol ProductsInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductsResponse {
-}
+protocol ProductsInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductsResponse {}

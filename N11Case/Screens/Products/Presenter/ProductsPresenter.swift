@@ -9,8 +9,7 @@ import Foundation
 import NetworkProvider
 import UIKit
 
-protocol ProductsPresenterProtocol: AnyObject {
-    func viewDidLoad()
+protocol ProductsPresenterProtocol: BasePresenterProtocol {
     func fetchNextPage()
     func numberOfSections() -> Int
     func sectionType(at index: Int) -> SectionType
@@ -93,7 +92,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 // swiftlint:disable no_grouping_extension
 extension ProductsPresenter: ProductsInteractorOutputProtocol {
     func didFetchData(_ response: ProductsResponse) {
-        if let nextPage = response.nextPage {
+        if response.nextPage != nil {
             entity.pagination.nextPage()
         } else {
             entity.pagination.hasNextPage = false

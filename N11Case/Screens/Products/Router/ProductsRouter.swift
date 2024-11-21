@@ -21,7 +21,7 @@ final class ProductsRouter: ProductsRouterProtocol {
     }
 
     func navigateToDetail(from view: Viewable, with entity: ProductDisplayable) {
-        let detailViewController: UIViewController = ProductDetailRouter.createModule(with: entity)
+        let detailViewController: UIViewController = ProductDetailRouter().createModule(with: entity, apiService: apiService)
         view.push(detailViewController, animated: true)
     }
 

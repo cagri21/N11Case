@@ -7,15 +7,14 @@
 
 import NetworkProvider
 
-protocol ProductDetailPresenterProtocol: AnyObject {
-    func viewDidLoad()
-}
+protocol ProductDetailPresenterProtocol: BasePresenterProtocol { }
 
 final class ProductDetailPresenter: ProductDetailPresenterProtocol {
 
     private weak var view: ProductDetailViewProtocol?
     private let interactor: ProductDetailInteractorProtocol
     private let router: ProductDetailRouterProtocol
+    private var entity: ProductDetailEntity
 
     private var isLoading: Bool = false {
         didSet {
@@ -23,26 +22,27 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
         }
     }
 
-    init(view: ProductDetailViewProtocol, interactor: ProductDetailInteractorProtocol, router: ProductDetailRouterProtocol) {
+    init(view: ProductDetailViewProtocol, interactor: ProductDetailInteractorProtocol, router: ProductDetailRouterProtocol, entity: ProductDetailEntity) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.entity = entity
     }
 
     func viewDidLoad() {
         isLoading = true
-//        interactor.fetchProducts(page: currentPage)
+//        interactor.fetchProduct()
     }
 
 }
 // swiftlint:disable no_grouping_extension
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
-    func didFetchProduct(_ response: any NetworkProvider.ProductDisplayable) {
+    func didFetchData(_ response: ProductsResponse) {
         isLoading = false
-        view?.showProducts()
+        view?.showData()
     }
 
-    func didFailToFetchProducts(_ error: Error) {
+    func didFailToFetchData(_ error: any Error) {
         isLoading = false
         view?.showError("Failed to load products")
     }

@@ -8,7 +8,7 @@
 protocol BaseViewProtocol: AnyObject {
     /// Show or hide a loading indicator.
     func showLoading(_ isLoading: Bool)
-    
+
     /// Handle the response data.
     func showData()
 

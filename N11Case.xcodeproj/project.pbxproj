@@ -55,6 +55,8 @@
 		DFB0B49E2CEE5167005BA37A /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B49D2CEE5163005BA37A /* BaseInteractor.swift */; };
 		DFB0B4A02CEE5765005BA37A /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B49F2CEE575D005BA37A /* BaseRouter.swift */; };
 		DFB0B4A22CEE9F1B005BA37A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A12CEE9F16005BA37A /* BaseView.swift */; };
+		DFB0B4A42CEEA1B6005BA37A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */; };
+		DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
@@ -129,6 +131,8 @@
 		DFB0B49D2CEE5163005BA37A /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		DFB0B49F2CEE575D005BA37A /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		DFB0B4A12CEE9F16005BA37A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailEntity.swift; sourceTree = "<group>"; };
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +205,7 @@
 		DF0767A52CEB82E800196CE2 /* BaseVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */,
 				DFB0B4A12CEE9F16005BA37A /* BaseView.swift */,
 				DFB0B49F2CEE575D005BA37A /* BaseRouter.swift */,
 				DFB0B49D2CEE5163005BA37A /* BaseInteractor.swift */,
@@ -212,6 +217,7 @@
 		DF0767AA2CEB856100196CE2 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DFB0B4A52CEECFF3005BA37A /* Entity */,
 				DF0767B12CEB85DC00196CE2 /* View */,
 				DF0767B22CEB85F500196CE2 /* Interactor */,
 				DF0767B02CEB85D600196CE2 /* Presenter */,
@@ -469,6 +475,14 @@
 			path = BasePagination;
 			sourceTree = "<group>";
 		};
+		DFB0B4A52CEECFF3005BA37A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		DFB17D202CE7608000839DA3 = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD7D7672CED88DC00BA5D8B /* AlertHelper.swift in Sources */,
+				DFB0B4A42CEEA1B6005BA37A /* BasePresenter.swift in Sources */,
 				DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */,
 				DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */,
 				DFB0B4A22CEE9F1B005BA37A /* BaseView.swift in Sources */,
@@ -707,6 +722,7 @@
 				DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */,
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
 				DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */,
+				DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */,
 				DFB0B4A02CEE5765005BA37A /* BaseRouter.swift in Sources */,
 				DFB0B49E2CEE5167005BA37A /* BaseInteractor.swift in Sources */,
 				DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */,

@@ -13,8 +13,8 @@ protocol ProductDetailInteractorProtocol: AnyObject {
 }
 
 final class ProductDetailInteractor: ProductDetailInteractorProtocol {
-    
-    weak var presenter: ProductDetailInteractorOutputProtocol?
+
+    weak var presenter: (any ProductDetailInteractorOutputProtocol)?
     private let apiService: ProductsServiceProtocol
 
     init(apiService: ProductsServiceProtocol) {
@@ -36,7 +36,4 @@ final class ProductDetailInteractor: ProductDetailInteractorProtocol {
     }
 }
 
-protocol ProductDetailInteractorOutputProtocol: AnyObject {
-    func didFetchProduct(_ response: ProductDisplayable)
-    func didFailToFetchProducts(_ error: Error)
-}
+protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductsResponse {}

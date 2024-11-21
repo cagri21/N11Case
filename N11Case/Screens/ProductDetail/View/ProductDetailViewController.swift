@@ -7,23 +7,11 @@
 
 import UIKit
 
-protocol ProductDetailViewProtocol: AnyObject {
-    func showLoading(_ isLoading: Bool)
-    func showProducts()
-    func showError(_ message: String)
-}
+protocol ProductDetailViewProtocol: BaseViewProtocol {}
 
 class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol {
 
-    weak var presenter: ProductDetailPresenterProtocol!
-
-    init(presenter: ProductsPresenterProtocol?) {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    internal var presenter: ProductDetailPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +20,10 @@ class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol
     }
 
     func showLoading(_ isLoading: Bool) {
-        
+
     }
     
-    func showProducts() {
+    func showData() {
         
     }
     

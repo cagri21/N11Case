@@ -9,16 +9,19 @@ import UIKit
 
 // MARK: - DetailRouter
 protocol ProductDetailRouterProtocol: AnyObject {
-    static func createModule(with product: ProductDisplayable) -> UIViewController
+    func createModule(with product: ProductDisplayable, apiService: ProductsServiceProtocol) -> UIViewController
 }
 
 final class ProductDetailRouter: ProductDetailRouterProtocol {
 
-    static func createModule(with product: ProductDisplayable) -> UIViewController {
-        let interactor = ProductDetailInteractor(apiService: ProductsService())
-        let router: ProductDetailRouter = ProductDetailRouter()
-        let viewController: ProductDetailViewController = ProductDetailViewController(presenter: nil)
-        let presenter = ProductDetailPresenter(view: viewController, interactor: interactor, router: router)
+    init() { }
+
+    func createModule(with product: ProductDisplayable, apiService: ProductsServiceProtocol) -> UIViewController {
+        let interactor: ProductDetailInteractor = ProductDetailInteractor(apiService: ProductsService())
+        let router: ProductDetailRouter = self
+        let viewController: ProductDetailViewController = ProductDetailViewController()
+        let entity: ProductDetailEntity = ProductDetailEntity(product: product)
+        let presenter: ProductDetailPresenter = ProductDetailPresenter(view: viewController, interactor: interactor, router: router, entity: entity)
         viewController.presenter = presenter
         interactor.presenter = presenter
         return viewController
