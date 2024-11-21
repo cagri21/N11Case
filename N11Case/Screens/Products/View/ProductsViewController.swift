@@ -52,7 +52,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol, UI
     }
 
     func showError(_ message: String) {
-        print("Error: \(message)")
+        AlertPresenter().presentAlert(title: Alert.errorTitle, message: message)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

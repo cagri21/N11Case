@@ -31,13 +31,13 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
 
     func viewDidLoad() {
         isLoading = true
-//        interactor.fetchProduct()
+        interactor.fetchProduct()
     }
 
 }
 // swiftlint:disable no_grouping_extension
 extension ProductDetailPresenter: ProductDetailInteractorOutputProtocol {
-    func didFetchData(_ response: ProductsResponse) {
+    func didFetchData(_ response: ProductResponse) {
         isLoading = false
         view?.showData()
     }

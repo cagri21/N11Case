@@ -10,3 +10,8 @@ protocol BaseInteractorOutputProtocol: AnyObject {
     func didFetchData(_ response: Response)
     func didFailToFetchData(_ error: Error)
 }
+
+protocol BaseInteractorProtocol: AnyObject {
+    associatedtype Entity
+    func getEntity() -> Entity
+}

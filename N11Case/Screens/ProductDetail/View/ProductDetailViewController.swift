@@ -15,7 +15,7 @@ class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +24,7 @@ class ProductDetailViewController: BaseViewController, ProductDetailViewProtocol
     }
     
     func showData() {
-        
+        print("data")
     }
     
     func showError(_ message: String) {

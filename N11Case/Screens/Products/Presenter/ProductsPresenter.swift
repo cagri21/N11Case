@@ -21,9 +21,8 @@ protocol ProductsPresenterProtocol: BasePresenterProtocol {
 final class ProductsPresenter: ProductsPresenterProtocol {
 
     private weak var view: ProductsViewProtocol?
-    private let interactor: ProductsInteractorProtocol
+    private let interactor: any ProductsInteractorProtocol
     private let router: ProductsRouterProtocol
-    private var entity: ProductsEntity
 
     private var isLoading: Bool = false {
         didSet {
@@ -31,33 +30,32 @@ final class ProductsPresenter: ProductsPresenterProtocol {
         }
     }
 
-    init(view: ProductsViewProtocol, interactor: ProductsInteractorProtocol, router: ProductsRouterProtocol, entity: ProductsEntity) {
+    init(view: ProductsViewProtocol, interactor: any ProductsInteractorProtocol, router: ProductsRouterProtocol) {
         self.view = view
         self.interactor = interactor
         self.router = router
-        self.entity = entity
     }
 
     func viewDidLoad() {
         isLoading = true
-        interactor.fetchProducts(page: entity.pagination.currentPage)
+        interactor.fetchProducts(page: interactor.getEntity().pagination.currentPage)
     }
 
     func fetchNextPage() {
-        guard !isLoading, entity.pagination.hasNextPage else {
+        guard !isLoading, interactor.getEntity().pagination.hasNextPage else {
             return
         }
         isLoading = true
-        interactor.fetchProducts(page: entity.pagination.currentPage)
+        interactor.fetchProducts(page: interactor.getEntity().pagination.currentPage)
     }
 
     func numberOfSections() -> Int {
-        let sectionsCount: Int = entity.sections.count
+        let sectionsCount: Int = interactor.getEntity().sections.count
         return sectionsCount
     }
 
     func numberOfItems(in section: Int) -> Int {
-        switch entity.sections[section] {
+        switch interactor.getEntity().sections[section] {
         case .sponsored(let products):
             return products.count
         case .products(let products):
@@ -66,12 +64,12 @@ final class ProductsPresenter: ProductsPresenterProtocol {
     }
 
     func sectionType(at section: Int) -> SectionType {
-        let sectionType: SectionType = entity.sections[section]
+        let sectionType: SectionType = interactor.getEntity().sections[section]
         return sectionType
     }
 
     func product(at indexPath: IndexPath) -> ProductDisplayable {
-        switch entity.sections[indexPath.section] {
+        switch interactor.getEntity().sections[indexPath.section] {
         case .sponsored(let products):
             return products[indexPath.item]
         case .products(let products):
@@ -91,18 +89,7 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 }
 // swiftlint:disable no_grouping_extension
 extension ProductsPresenter: ProductsInteractorOutputProtocol {
-    func didFetchData(_ response: ProductsResponse) {
-        if response.nextPage != nil {
-            entity.pagination.nextPage()
-        } else {
-            entity.pagination.hasNextPage = false
-        }
-
-        if let sponsored = response.sponsoredProducts, !sponsored.isEmpty {
-            entity.sections.append(.sponsored(sponsored))
-        }
-        entity.sections.append(.products(response.products))
-
+    func didFetchData(_ response: ProductsEntity) {
         isLoading = false
         view?.showData()
     }

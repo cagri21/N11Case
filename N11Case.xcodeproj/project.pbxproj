@@ -14,11 +14,11 @@
 		DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */; };
 		DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */; };
 		DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */; };
+		DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF1DD3C82CEF693C0002992E /* NetworkProvider */; };
 		DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */; };
 		DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */; };
 		DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C802CECF9D7002B42AD /* Double+Ext.swift */; };
 		DF475C842CECFD08002B42AD /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C832CECFD06002B42AD /* UIColor+Ext.swift */; };
-		DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C8C2CED01CD002B42AD /* NetworkProvider */; };
 		DF475C932CED0A56002B42AD /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C922CED0A4D002B42AD /* CurrencyConverter.swift */; };
 		DF475C962CED25C4002B42AD /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DF475C952CED25C4002B42AD /* Cosmos */; };
 		DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C982CED2B25002B42AD /* ScreenSizeAdjustingConstraint.swift */; };
@@ -154,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF475C8D2CED01CD002B42AD /* NetworkProvider in Frameworks */,
+				DF1DD3C92CEF693C0002992E /* NetworkProvider in Frameworks */,
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
@@ -568,8 +568,8 @@
 			packageProductDependencies = (
 				DF8903C62CEA38AD009A0C99 /* netfox */,
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
-				DF475C8C2CED01CD002B42AD /* NetworkProvider */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
+				DF1DD3C82CEF693C0002992E /* NetworkProvider */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -650,8 +650,8 @@
 			packageReferences = (
 				DF8903C52CEA38AD009A0C99 /* XCRemoteSwiftPackageReference "netfox" */,
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
-				DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -1115,7 +1115,7 @@
 				minimumVersion = 14.1.3;
 			};
 		};
-		DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
+		DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cagri21/NetworkProvider";
 			requirement = {
@@ -1147,9 +1147,9 @@
 			package = DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
 		};
-		DF475C8C2CED01CD002B42AD /* NetworkProvider */ = {
+		DF1DD3C82CEF693C0002992E /* NetworkProvider */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF475C8B2CED01CD002B42AD /* XCRemoteSwiftPackageReference "NetworkProvider" */;
+			package = DF1DD3C72CEF693C0002992E /* XCRemoteSwiftPackageReference "NetworkProvider" */;
 			productName = NetworkProvider;
 		};
 		DF475C952CED25C4002B42AD /* Cosmos */ = {

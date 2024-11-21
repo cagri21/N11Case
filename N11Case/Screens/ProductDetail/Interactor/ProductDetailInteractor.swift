@@ -9,7 +9,7 @@ import Foundation
 import NetworkProvider
 
 protocol ProductDetailInteractorProtocol: AnyObject {
-    func fetchProduct(with product: ProductDisplayable)
+    func fetchProduct()
 }
 
 final class ProductDetailInteractor: ProductDetailInteractorProtocol {
@@ -21,19 +21,20 @@ final class ProductDetailInteractor: ProductDetailInteractorProtocol {
         self.apiService = apiService
     }
 
-    func fetchProduct(with product: ProductDisplayable) {
-//        apiService.getProducts(page: page, parameters: nil) { [weak self] result in
-//            guard let self = self else {
-//                return
-//            }
-//            switch result {
-//            case .success(let response):
-//                self.presenter?.didFetchProducts(response)
-//            case .failure(let error):
-//                self.presenter?.didFailToFetchProducts(error)
-//            }
-//        }
+    func fetchProduct() {
+        let productID: Int = 110
+        apiService.fetchProduct(productID: productID, parameters: nil) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            switch result {
+            case .success(let response):
+                self.presenter?.didFetchData(response)
+            case .failure(let error):
+                self.presenter?.didFailToFetchData(error)
+            }
+        }
     }
 }
 
-protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductsResponse {}
+protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductResponse {}

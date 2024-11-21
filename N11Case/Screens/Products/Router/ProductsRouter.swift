@@ -27,14 +27,13 @@ final class ProductsRouter: ProductsRouterProtocol {
 
     func createModule() -> UIViewController {
         let productsEntity: ProductsEntity = ProductsEntity()
-        let interactor: ProductsInteractor = ProductsInteractor(apiService: apiService)
+        let interactor: ProductsInteractor = ProductsInteractor(apiService: apiService, entity: productsEntity)
         let router: ProductsRouter = self
         let viewController: ProductsViewController = ProductsViewController()
         let presenter: ProductsPresenter = ProductsPresenter(
             view: viewController,
             interactor: interactor,
-            router: router,
-            entity: productsEntity
+            router: router
         )
         viewController.presenter = presenter
         interactor.presenter = presenter
