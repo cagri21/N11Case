@@ -18,7 +18,6 @@ protocol BasePaginationProtocol {
 struct BasePagination: BasePaginationProtocol {
     var currentPage: Int = 1
     var hasNextPage: Bool = true
-    var isLoading: Bool = false
 
     /// Resets the pagination state to its initial values.
     mutating func reset() {
