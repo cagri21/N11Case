@@ -8,7 +8,7 @@
 protocol BaseInteractorOutputProtocol: AnyObject {
     associatedtype Response
     func didFetchData(_ response: Response)
-    func didFailToFetchData(_ errorMessage: String)
+    func didFailToFetchData(_ error: Error)
 }
 
 protocol BaseInteractorProtocol: AnyObject {

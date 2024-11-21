@@ -31,8 +31,7 @@ final class ProductDetailInteractor: ProductDetailInteractorProtocol {
             case .success(let response):
                 self.presenter?.didFetchData(response)
             case .failure(let error):
-//                let errorMessage: String = errorHandlingService.getErrorMessage(for: error)
-                self.presenter?.didFailToFetchData("errorMessage")
+                self.presenter?.didFailToFetchData(error)
             }
         }
     }

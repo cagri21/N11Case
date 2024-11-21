@@ -16,12 +16,10 @@ final class ProductsInteractor: ProductsInteractorProtocol {
     weak var presenter: (any ProductsInteractorOutputProtocol)?
     private let apiService: ProductsServiceProtocol
     private var entity: ProductsEntity
-    private let errorHandlingService: ErrorHandlingServiceProtocol
 
-    init(apiService: ProductsServiceProtocol, entity: ProductsEntity, errorHandlingService: ErrorHandlingServiceProtocol) {
+    init(apiService: ProductsServiceProtocol, entity: ProductsEntity ) {
         self.apiService = apiService
         self.entity = entity
-        self.errorHandlingService = errorHandlingService
     }
 
     func fetchProducts(page: Int) {
@@ -33,8 +31,7 @@ final class ProductsInteractor: ProductsInteractorProtocol {
             case .success(let response):
                 self.processResponse(response)
             case .failure(let error):
-                let errorMessage: String = errorHandlingService.getErrorMessage(for: error)
-                self.presenter?.didFailToFetchData(errorMessage)
+                self.presenter?.didFailToFetchData(error)
             }
         }
     }
