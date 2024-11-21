@@ -217,10 +217,10 @@
 		DF0767AA2CEB856100196CE2 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
-				DFB0B4A52CEECFF3005BA37A /* Entity */,
 				DF0767B12CEB85DC00196CE2 /* View */,
 				DF0767B22CEB85F500196CE2 /* Interactor */,
 				DF0767B02CEB85D600196CE2 /* Presenter */,
+				DFB0B4A52CEECFF3005BA37A /* Entity */,
 				DF0767AF2CEB85D000196CE2 /* Router */,
 			);
 			path = ProductDetail;
@@ -354,10 +354,10 @@
 		DF8903EF2CEA3D64009A0C99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFB0B4942CEE47E6005BA37A /* Entity */,
 				DF8904202CEA78E4009A0C99 /* View */,
 				DF8904232CEA78FE009A0C99 /* Interactor */,
 				DF8904212CEA78E8009A0C99 /* Presenter */,
+				DFB0B4942CEE47E6005BA37A /* Entity */,
 				DF8904222CEA78F8009A0C99 /* Router */,
 			);
 			path = Products;
