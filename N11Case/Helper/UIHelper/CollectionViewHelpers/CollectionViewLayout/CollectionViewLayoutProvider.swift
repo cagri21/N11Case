@@ -8,17 +8,28 @@
 import NetworkProvider
 import UIKit
 
-/// Protocol defining the layout creation behavior for different sections
-protocol SectionLayoutProvider {
+/// Protocol for horizontal layout sections
+protocol HorizontalSectionProvider {
+    func createSection(environment: NSCollectionLayoutEnvironment, isSponsored: Bool) -> NSCollectionLayoutSection
+}
+
+/// Protocol for vertical layout sections
+protocol VerticalSectionProvider {
     func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }
 
 /// Layout provider for sponsored products section
-final class SponsoredProductsLayoutProvider: SectionLayoutProvider {
-    func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
+final class HorizontalProductsLayoutProvider: HorizontalSectionProvider {
+    func createSection(environment: NSCollectionLayoutEnvironment, isSponsored: Bool) -> NSCollectionLayoutSection {
         let itemSpace: CGFloat = 10
         let containerWidth: CGFloat = environment.container.contentSize.width - itemSpace
-        let containerHeight: CGFloat = environment.container.contentSize.height / 4
+        var containerHeight: CGFloat = environment.container.contentSize.height
+
+        if isSponsored {
+            containerHeight /= 4
+        } else {
+            containerHeight *= 0.9
+        }
 
         // Define the item size (fills the entire screen horizontally and vertically)
         let itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(
@@ -59,7 +70,7 @@ final class SponsoredProductsLayoutProvider: SectionLayoutProvider {
 }
 
 /// Layout provider for normal products section
-final class NormalProductsLayoutProvider: SectionLayoutProvider {
+final class VerticalProductsLayoutProvider: VerticalSectionProvider {
     func createSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let totalWidth: CGFloat = environment.container.contentSize.width
         let spacing: CGFloat = 10 // Space between items and edges
@@ -95,25 +106,32 @@ final class NormalProductsLayoutProvider: SectionLayoutProvider {
 
 /// Protocol for layout providers
 protocol CollectionViewLayoutProvider {
-    func createLayout() -> UICollectionViewLayout
+    func createCompositionalLayout() -> UICollectionViewLayout
+    func createHorizontalLayout() -> UICollectionViewLayout
 }
 
 /// Concrete layout provider implementation
 final class CustomProductLayoutProvider: CollectionViewLayoutProvider {
-    private let sponsoredSectionProvider: SectionLayoutProvider
-    private let normalSectionProvider: SectionLayoutProvider
+    private let horizontalSectionProvider: HorizontalSectionProvider
+    private let verticalSectionProvider: VerticalSectionProvider
 
-    init(sponsoredSectionProvider: SectionLayoutProvider = SponsoredProductsLayoutProvider(),
-         normalSectionProvider: SectionLayoutProvider = NormalProductsLayoutProvider()) {
-        self.sponsoredSectionProvider = sponsoredSectionProvider
-        self.normalSectionProvider = normalSectionProvider
+    init(horizontalSectionProvider: HorizontalSectionProvider = HorizontalProductsLayoutProvider(),
+         verticalSectionProvider: VerticalSectionProvider = VerticalProductsLayoutProvider()) {
+        self.horizontalSectionProvider = horizontalSectionProvider
+        self.verticalSectionProvider = verticalSectionProvider
     }
 
-    func createLayout() -> UICollectionViewLayout {
+    func createCompositionalLayout() -> UICollectionViewLayout {
         UICollectionViewCompositionalLayout { sectionIndex, environment in
             sectionIndex == 0
-                ? self.sponsoredSectionProvider.createSection(environment: environment)
-                : self.normalSectionProvider.createSection(environment: environment)
+                ? self.horizontalSectionProvider.createSection(environment: environment, isSponsored: true)
+            : self.verticalSectionProvider.createSection(environment: environment)
+        }
+    }
+
+    func createHorizontalLayout() -> UICollectionViewLayout {
+        UICollectionViewCompositionalLayout { _ , environment in
+            self.horizontalSectionProvider.createSection(environment: environment, isSponsored: false)
         }
     }
 }

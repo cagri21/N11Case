@@ -24,7 +24,7 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol {
                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                     withReuseIdentifier: SectionPagerView().className
                 )
-            let layout: UICollectionViewLayout = CustomProductLayoutProvider().createLayout()
+            let layout: UICollectionViewLayout = CustomProductLayoutProvider().createCompositionalLayout()
             productsCollectionView.setCollectionViewLayout(layout, animated: true)
         }
     }
@@ -46,7 +46,10 @@ final class ProductsViewController: BaseViewController, ProductsViewProtocol {
     }
 
     func showData() {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
             self.productsCollectionView.reloadData()
         }
     }
