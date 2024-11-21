@@ -237,8 +237,8 @@
 				DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */,
 				DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */,
 				DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */,
-				DFB8026D2CEFCCCD004FB9BA /* Cell */,
 				DFB802722CEFDB3A004FB9BA /* ProductDetail+Ext */,
+				DFB8026D2CEFCCCD004FB9BA /* Cell */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -345,8 +345,8 @@
 				DF8903EC2CEA3D64009A0C99 /* ProductsRouter.swift */,
 				DF8903ED2CEA3D64009A0C99 /* ProductsViewController.swift */,
 				DF8903EE2CEA3D64009A0C99 /* ProductsViewController.xib */,
-				DF8903E92CEA3D64009A0C99 /* Cells */,
 				DFB0B4AA2CEED3CC005BA37A /* ProductView+Ext */,
+				DF8903E92CEA3D64009A0C99 /* Cells */,
 			);
 			path = Products;
 			sourceTree = "<group>";
