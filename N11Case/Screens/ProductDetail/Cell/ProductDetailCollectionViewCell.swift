@@ -9,7 +9,7 @@ import UIKit
 
 class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productImage: UIImageView!
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
 

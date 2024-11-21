@@ -56,13 +56,11 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
         }
         return image
     }
-    
+
     func getProduct() -> (title: String, description: String, price: Double, discountedPrice: Double?, rate: Double?, sellerName: String) {
         guard let product = interactor.entity.productDetail else {
-            // Return default values as a tuple
             return (title: "", description: "", price: 0, discountedPrice: nil, rate: nil, sellerName: "")
         }
-        
         // Extract the values from the ProductResponse object and return as a tuple
         return (title: product.title, description: product.description, price: product.price, discountedPrice: product.instantDiscountPrice, rate: product.rate, sellerName: product.sellerName)
     }

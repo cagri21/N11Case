@@ -25,6 +25,6 @@ final class UILabelExtTests: XCTestCase {
     func testApplyStrikethroughWithEmptyText() {
         label.text = ""
         label.strikeThrough(true)
-        XCTAssertNil(label.attributedText, "Attributed text should remain nil when applying strikethrough to an empty label.")
+        XCTAssertNil(label.attributedText, "Attributed text should remain nil when to an empty label.")
     }
 }

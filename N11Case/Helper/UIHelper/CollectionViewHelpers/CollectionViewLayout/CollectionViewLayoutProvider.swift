@@ -130,7 +130,7 @@ final class CustomProductLayoutProvider: CollectionViewLayoutProvider {
     }
 
     func createHorizontalLayout() -> UICollectionViewLayout {
-        UICollectionViewCompositionalLayout { _ , environment in
+        UICollectionViewCompositionalLayout { _, environment in
             self.horizontalSectionProvider.createSection(environment: environment, isSponsored: false)
         }
     }
