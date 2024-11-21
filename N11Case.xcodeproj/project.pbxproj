@@ -45,6 +45,7 @@
 		DF89041A2CEA5EE5009A0C99 /* N11CaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */; };
 		DF89041E2CEA5EF3009A0C99 /* N11CaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */; };
 		DF89041F2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */; };
+		DFABC2952CEFAE6F00775FED /* ProductsView+CollectionDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFABC2942CEFAE6600775FED /* ProductsView+CollectionDelegateExt.swift */; };
 		DFB0B4882CED962E005BA37A /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4872CED962B005BA37A /* UICollectionView+Ext.swift */; };
 		DFB0B48A2CED96D0005BA37A /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4892CED96CC005BA37A /* UILabel+Ext.swift */; };
 		DFB0B48D2CED97AB005BA37A /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B48C2CED97A8005BA37A /* BaseVC.swift */; };
@@ -57,7 +58,7 @@
 		DFB0B4A22CEE9F1B005BA37A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A12CEE9F16005BA37A /* BaseView.swift */; };
 		DFB0B4A42CEEA1B6005BA37A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */; };
 		DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */; };
-		DFB0B4A92CEED372005BA37A /* ProductsView+CollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionExt.swift */; };
+		DFB0B4A92CEED372005BA37A /* ProductsView+CollectionDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionDataExt.swift */; };
 		DFD7D7602CED52A800BA5D8B /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D75F2CED529E00BA5D8B /* UIManager.swift */; };
 		DFD7D7622CED52DD00BA5D8B /* UIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7612CED52D000BA5D8B /* UIManagerTests.swift */; };
 		DFD7D7642CED593400BA5D8B /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7D7632CED592E00BA5D8B /* UIView+Ext.swift */; };
@@ -122,6 +123,7 @@
 		DF8904182CEA5EE5009A0C99 /* N11CaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseTests.swift; sourceTree = "<group>"; };
 		DF89041B2CEA5EF3009A0C99 /* N11CaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseUITests.swift; sourceTree = "<group>"; };
 		DF89041C2CEA5EF3009A0C99 /* N11CaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = N11CaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DFABC2942CEFAE6600775FED /* ProductsView+CollectionDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsView+CollectionDelegateExt.swift"; sourceTree = "<group>"; };
 		DFB0B4872CED962B005BA37A /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		DFB0B4892CED96CC005BA37A /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		DFB0B48C2CED97A8005BA37A /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		DFB0B4A12CEE9F16005BA37A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DFB0B4A32CEEA1B4005BA37A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		DFB0B4A62CEECFFA005BA37A /* ProductDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailEntity.swift; sourceTree = "<group>"; };
-		DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsView+CollectionExt.swift"; sourceTree = "<group>"; };
+		DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionDataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsView+CollectionDataExt.swift"; sourceTree = "<group>"; };
 		DFB17D292CE7608000839DA3 /* N11Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N11Case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D3F2CE7608200839DA3 /* N11CaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB17D492CE7608200839DA3 /* N11CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = N11CaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,7 +491,8 @@
 		DFB0B4AA2CEED3CC005BA37A /* ProductView+Ext */ = {
 			isa = PBXGroup;
 			children = (
-				DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionExt.swift */,
+				DFABC2942CEFAE6600775FED /* ProductsView+CollectionDelegateExt.swift */,
+				DFB0B4A82CEED36E005BA37A /* ProductsView+CollectionDataExt.swift */,
 			);
 			path = "ProductView+Ext";
 			sourceTree = "<group>";
@@ -729,10 +732,11 @@
 				DF8903F72CEA3D64009A0C99 /* UICollectionView+Ext.swift in Sources */,
 				DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */,
 				DFB0B4A22CEE9F1B005BA37A /* BaseView.swift in Sources */,
-				DFB0B4A92CEED372005BA37A /* ProductsView+CollectionExt.swift in Sources */,
+				DFB0B4A92CEED372005BA37A /* ProductsView+CollectionDataExt.swift in Sources */,
 				DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */,
 				DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */,
 				DF8903F82CEA3D64009A0C99 /* UIWindow+Ext.swift in Sources */,
+				DFABC2952CEFAE6F00775FED /* ProductsView+CollectionDelegateExt.swift in Sources */,
 				DF475C992CED2B2D002B42AD /* ScreenSizeAdjustingConstraint.swift in Sources */,
 				DFB0B4A72CEECFFF005BA37A /* ProductDetailEntity.swift in Sources */,
 				DFB0B4A02CEE5765005BA37A /* BaseRouter.swift in Sources */,

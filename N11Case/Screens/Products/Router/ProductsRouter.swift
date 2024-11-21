@@ -36,7 +36,7 @@ final class ProductsRouter: ProductsRouterProtocol {
             interactor: interactor,
             router: router
         )
-        viewController.presenter = presenter
+        viewController.presenter = presenter as? ProductsPresenterProtocol
         interactor.presenter = presenter
         return viewController
     }

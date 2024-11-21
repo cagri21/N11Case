@@ -10,7 +10,7 @@ import UIKit
 
 protocol ProductsViewProtocol: BaseViewProtocol {}
 
-final class ProductsViewController: BaseViewController, ProductsViewProtocol, UICollectionViewDelegate {
+final class ProductsViewController: BaseViewController, ProductsViewProtocol {
     @IBOutlet var productsCollectionView: UICollectionView! {
         didSet {
             productsCollectionView.delegate = self

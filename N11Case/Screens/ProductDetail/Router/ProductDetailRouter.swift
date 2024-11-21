@@ -17,11 +17,12 @@ final class ProductDetailRouter: ProductDetailRouterProtocol {
     init() { }
 
     func createModule(with product: ProductDisplayable, apiService: ProductsServiceProtocol) -> UIViewController {
-        let interactor: ProductDetailInteractor = ProductDetailInteractor(apiService: ProductsService())
+        let errorService: ErrorHandlingServiceProtocol = ErrorHandlingService()
+        let productEntity: ProductDetailEntity = ProductDetailEntity(product: product)
+        let interactor: ProductDetailInteractor = ProductDetailInteractor(apiService: ProductsService(), entity: productEntity, errorHandlingService: errorService)
         let router: ProductDetailRouter = self
         let viewController: ProductDetailViewController = ProductDetailViewController()
-        let entity: ProductDetailEntity = ProductDetailEntity(product: product)
-        let presenter: ProductDetailPresenter = ProductDetailPresenter(view: viewController, interactor: interactor, router: router, entity: entity)
+        let presenter: ProductDetailPresenter = ProductDetailPresenter(view: viewController, interactor: interactor, router: router)
         viewController.presenter = presenter
         interactor.presenter = presenter
         return viewController

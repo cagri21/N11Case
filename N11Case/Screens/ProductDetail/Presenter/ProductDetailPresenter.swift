@@ -14,7 +14,6 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
     private weak var view: ProductDetailViewProtocol?
     private let interactor: ProductDetailInteractorProtocol
     private let router: ProductDetailRouterProtocol
-    private var entity: ProductDetailEntity
 
     private var isLoading: Bool = false {
         didSet {
@@ -22,11 +21,10 @@ final class ProductDetailPresenter: ProductDetailPresenterProtocol {
         }
     }
 
-    init(view: ProductDetailViewProtocol, interactor: ProductDetailInteractorProtocol, router: ProductDetailRouterProtocol, entity: ProductDetailEntity) {
+    init(view: ProductDetailViewProtocol, interactor: any ProductDetailInteractorProtocol, router: ProductDetailRouterProtocol) {
         self.view = view
         self.interactor = interactor
         self.router = router
-        self.entity = entity
     }
 
     func viewDidLoad() {

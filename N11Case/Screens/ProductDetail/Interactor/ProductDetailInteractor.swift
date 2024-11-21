@@ -13,16 +13,19 @@ protocol ProductDetailInteractorProtocol: AnyObject {
 }
 
 final class ProductDetailInteractor: ProductDetailInteractorProtocol {
-
     weak var presenter: (any ProductDetailInteractorOutputProtocol)?
     private let apiService: ProductsServiceProtocol
+    private var productEntity: ProductDetailEntity
+    private let errorHandlingService: ErrorHandlingServiceProtocol
 
-    init(apiService: ProductsServiceProtocol) {
+    init(apiService: ProductsServiceProtocol, entity: ProductDetailEntity, errorHandlingService: ErrorHandlingServiceProtocol) {
         self.apiService = apiService
+        self.productEntity = entity
+        self.errorHandlingService = errorHandlingService
     }
 
     func fetchProduct() {
-        let productID: Int = 110
+        let productID: Int = productEntity.product.id
         apiService.fetchProduct(productID: productID, parameters: nil) { [weak self] result in
             guard let self = self else {
                 return
@@ -31,11 +34,12 @@ final class ProductDetailInteractor: ProductDetailInteractorProtocol {
             case .success(let response):
                 self.presenter?.didFetchData(response)
             case .failure(let error):
-//                let errorMessage: String = errorHandlingService.getErrorMessage(for: error)
-                self.presenter?.didFailToFetchData("errorMessage")
+                let errorMessage: String = errorHandlingService.getErrorMessage(for: error)
+                self.presenter?.didFailToFetchData(errorMessage)
             }
         }
     }
+    
 }
 
 protocol ProductDetailInteractorOutputProtocol: BaseInteractorOutputProtocol where Response == ProductResponse {}
