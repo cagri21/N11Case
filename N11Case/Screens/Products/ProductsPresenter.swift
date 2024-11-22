@@ -42,7 +42,6 @@ final class ProductsPresenter: ProductsPresenterProtocol {
 
     func fetchNextPage() {
         guard !isLoading, interactor.entity.pagination.hasNextPage else {
-            Logger.warning("fetchNextPage couldn't pass.")
             return
         }
         isLoading = true
