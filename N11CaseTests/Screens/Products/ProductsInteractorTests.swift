@@ -40,7 +40,9 @@ final class ProductsInteractorTests: XCTestCase {
         mockPresenter = MockPresenter()
         mockService = MockProductsService()
         let entity = ProductsEntity()
-        interactor = ProductsInteractor(apiService: mockService, entity: entity, errorHandlingService: ErrorHandlingService())
+        interactor = ProductsInteractor(apiService: mockService,
+                                        entity: entity,
+                                        errorHandlingService: ErrorHandlingService())
         interactor.presenter = mockPresenter
     }
 
