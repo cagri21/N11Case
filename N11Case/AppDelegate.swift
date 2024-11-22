@@ -72,9 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func startNetworkLogger (_ application: UIApplication) {
         #if DEBUG
-        application.applicationSupportsShakeToEdit = true
-        NFX.sharedInstance().start()
-        NFX.sharedInstance().setGesture(.custom)
+        if !NFX.sharedInstance().isStarted() {
+            application.applicationSupportsShakeToEdit = true
+            NFX.sharedInstance().start()
+            NFX.sharedInstance().setGesture(.custom)
+        }
         #endif
     }
 
