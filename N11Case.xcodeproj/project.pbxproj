@@ -1092,7 +1092,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cagri21/NetworkProvider";
 			requirement = {
-				branch = "feature_/viper-case-study";
+				branch = master;
 				kind = branch;
 			};
 		};
