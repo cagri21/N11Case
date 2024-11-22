@@ -5,8 +5,8 @@
 //  Created by Çağrı Yörükoğlu on 19.11.2024.
 //
 
-import UIKit
 import NetworkProvider
+import UIKit
 
 extension UILabel {
     func strikeThrough(_ isStrikeThrough: Bool) {

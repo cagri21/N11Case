@@ -5,9 +5,9 @@
 //  Created by Çağrı Yörükoğlu on 22.11.2024.
 //
 
-import UIKit
 import NetworkProvider
 import SDWebImage
+import UIKit
 
 extension UIImageView {
     /// Sets an image for a UIImageView using a URL string.

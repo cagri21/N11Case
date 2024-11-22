@@ -29,4 +29,3 @@ final class NormalProductCell: BaseProductCell {
         sellerLabel.text = product.sellerName
     }
 }
-
