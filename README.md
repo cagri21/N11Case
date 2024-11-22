@@ -11,3 +11,4 @@
 - Used Operation due to it provide cancel mechanism.
 
 - - Apart from the case, I configured basic staging and live environment. Usually I provide this by adding multiple schemas for staging and production but this time i keep very simple with User defaults.
+    - Used 3rd dependencies as netfox, alamofire, progresshud, cosmos, reachability and sdwebImage. 
