@@ -84,40 +84,30 @@ final class ProductDetailPresenterTests: XCTestCase {
     // MARK: - Test Cases
 
     func testViewDidLoad_CallsInteractorFetchProduct() {
-        // Arrange
-        let productID = 123
 
-        // Act
         presenter.viewDidLoad()
 
-        // Assert
         XCTAssertTrue(mockView.showLoadingCalled, "View should show loading when viewDidLoad is called.")
         XCTAssertTrue(mockInteractor.fetchProductCalled, "Interactor's fetchProduct should be called.")
     }
 
     func testDidFetchData_UpdatesView() {
-        // Arrange
         let mockProduct = MockProductDisplayable(id: 1,
                                                  title: "Mock Product",
                                                  image: "https://example.com/image.jpg",
                                                  price: 99.99)
 
-        // Act
         presenter.didFetchData()
 
-        // Assert
         XCTAssertFalse(mockView.showLoadingCalled, "Loading should be hidden after data is fetched.")
         XCTAssertTrue(mockView.showProductDataCalled, "View's showProductData should be called after data is fetched.")
     }
 
     func testDidFailToFetchData_ShowsError() {
-        // Arrange
         let errorMessage = "Failed to fetch product details."
 
-        // Act
         presenter.didFailToFetchData(errorMessage)
 
-        // Assert
         XCTAssertFalse(mockView.showLoadingCalled, "Loading should be hidden after a failure occurs.")
         XCTAssertEqual(mockView.showErrorMessage, errorMessage, "View should display the correct error message.")
     }
