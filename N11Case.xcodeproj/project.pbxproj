@@ -14,6 +14,7 @@
 		DF0767AD2CEB858000196CE2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767AB2CEB858000196CE2 /* ProductDetailViewController.swift */; };
 		DF0767AE2CEB858000196CE2 /* ProductDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0767AC2CEB858000196CE2 /* ProductDetailViewController.xib */; };
 		DF0767B42CEB861700196CE2 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0767B32CEB860F00196CE2 /* ProductDetailRouter.swift */; };
+		DF16FF022CF00138002C13A8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DF16FF012CF00138002C13A8 /* SDWebImage */; };
 		DF475C7D2CECF04F002B42AD /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7C2CECF04A002B42AD /* NSObject+Ext.swift */; };
 		DF475C7F2CECF8F3002B42AD /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C7E2CECF8ED002B42AD /* UILabel+Ext.swift */; };
 		DF475C812CECF9DD002B42AD /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF475C802CECF9D7002B42AD /* Double+Ext.swift */; };
@@ -170,6 +171,7 @@
 				DF0767962CEB5B8000196CE2 /* ProgressHUD in Frameworks */,
 				DF475C962CED25C4002B42AD /* Cosmos in Frameworks */,
 				DF8903C72CEA38AD009A0C99 /* netfox in Frameworks */,
+				DF16FF022CF00138002C13A8 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +534,7 @@
 				DF0767952CEB5B8000196CE2 /* ProgressHUD */,
 				DF475C952CED25C4002B42AD /* Cosmos */,
 				DFE0B9F42CEFF636007B16BB /* NetworkProvider */,
+				DF16FF012CF00138002C13A8 /* SDWebImage */,
 			);
 			productName = N11Case;
 			productReference = DFB17D292CE7608000839DA3 /* N11Case.app */;
@@ -614,6 +617,7 @@
 				DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */,
 				DFE0B9F32CEFF636007B16BB /* XCRemoteSwiftPackageReference "NetworkProvider" */,
+				DF16FF002CF00138002C13A8 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFB17D2A2CE7608000839DA3 /* Products */;
@@ -1083,6 +1087,14 @@
 				minimumVersion = 14.1.3;
 			};
 		};
+		DF16FF002CF00138002C13A8 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
 		DF475C942CED25C4002B42AD /* XCRemoteSwiftPackageReference "Cosmos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/Cosmos";
@@ -1114,6 +1126,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF0767942CEB5B8000196CE2 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		DF16FF012CF00138002C13A8 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF16FF002CF00138002C13A8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		DF475C952CED25C4002B42AD /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;
