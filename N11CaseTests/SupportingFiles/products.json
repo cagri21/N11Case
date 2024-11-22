@@ -1,0 +1,129 @@
+{
+    "page": "1",
+    "nextPage": "2",
+    "published_at": "2014-11-11T08:40:51.620Z",
+    "sponsoredProducts": [
+        {
+            "id":220,
+            "title": "Apple iPhone 13 Pro - Kılıf Simli Shining Silikon",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu-kiliflari/apple-iphone-13-pro-kilif-simli-shining-silikon__0522414854117079.jpg",
+            "price": 39.9,
+            "instantDiscountPrice": 29.9,
+            "rate" : 4.3
+        },
+        {
+            "id":221,
+            "title": "Apple iPhone 13 Pro - Kilif Telefon Kilifi Sert Kapak",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu-kiliflari/apple-iphone-13-pro-kilif-telefon-kilifi-sert-kapak__0430863345051939.jpg",
+            "price": 46.9,
+            "instantDiscountPrice": 32.9,
+            "rate" : 2.3
+        },
+        {
+            "id":222,
+            "title": "Apple iPhone 13 Pro - Kılıf Kapaklı Kartlıklı Cüzdan Kilif",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu-kiliflari/apple-iphone-13-pro-kilif-kapakli-kartlikli-cuzdan-kilif__1517779819149470.jpg",
+            "price": 79.9,
+            "instantDiscountPrice": 59.9
+        },
+        {
+            "id":223,
+            "title": "Apple iPhone 13 - Kilif",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu-kiliflari/apple-iphone-13-kilif-telefon-kilifi-sert-kapak__0281097707937998.jpg",
+            "price": 32.9,
+            "instantDiscountPrice": 29.9,
+            "rate" : 3.3
+        },
+        {
+            "id":224,
+            "title": "Apple iPhone 13 Pro - Kılıf Telefon Kilifi Şeffaf Sert Kapak",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu-kiliflari/apple-iphone-13-pro-kilif-telefon-kilifi-seffaf-sert-kapak__0430863345051939.jpg",
+            "price": 33.9,
+            "instantDiscountPrice": 22.9,
+            "rate" : 4.7
+        }
+
+    ],
+
+    "products": [
+        {
+            "id":110,
+            "title": "Apple iPhone 13 Pro 256 GB (Apple Türkiye Garantili)",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-256-gb-apple-turkiye-garantili__1307330226705238.jpg",
+            "price": 19999,
+            "instantDiscountPrice": 19399,
+            "rate" : 4.7,
+            "sellerName": "BERKEGRUP"
+        }, {
+            "id":518649778,
+            "title": "Apple iPhone 13",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-256-gb-apple-turkiye-garantili__1544546099432627.jpg",
+            "price": 29999.99,
+            "instantDiscountPrice": 29399,
+            "rate" : 4.2,
+            "sellerName": "gokkusagibilgisayar"
+        }, {
+            "id":518650061,
+            "title": "Apple iPhone 13 Pro 512 GB",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-512-gb-apple-turkiye-garantili__1544546099432627.jpg",
+            "price": 34999,
+            "instantDiscountPrice": 34399,
+            "rate" : 2.7,
+            "sellerName": "gokkusagibilgisayar"
+        }, {
+            "id":518674041,
+            "title": "Apple iPhone 13 Pro Max 512 GB (Apple Türkiye Garantili)",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-max-512-gb-apple-turkiye-garantili__0371396675347042.jpg",
+            "price": 40635,
+            "instantDiscountPrice": 40635,
+            "sellerName": "yeniguniletisim"
+        }, {
+            "id":518672105,
+            "title": "Apple iPhone 13 Pro Max 128 GB (Apple Türkiye Garantili)",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-max-128-gb-apple-turkiye-garantili__0371396675347042.jpg",
+            "price": 32000,
+            "instantDiscountPrice": 31400,
+            "rate" : 4.1,
+            "sellerName": "Yenigünİletişim"
+        }, {
+            "id":510361068,
+            "title": "Apple iPhone 13",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-max-128-gb-apple-turkiye-garantili__0371396675347042.jpg",
+            "price": 30999,
+            "instantDiscountPrice": 30399,
+            "rate" : 4.7,
+            "sellerName": "hmgbilişim"
+        }, {
+            "id":514298766,
+            "title": "Apple iPhone 13 Pro 1 TB (Apple Türkiye Garantili)",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-1-tb-apple-turkiye-garantili__1584725628235073.jpg",
+            "price": 30099,
+            "instantDiscountPrice": 29999,
+            "rate" : 1.7,
+            "sellerName": "exbilisim"
+        }, {
+            "id":518510729,
+            "title": "Apple iPhone 13 Pro Max 128 GB (Apple Türkiye Garantili)",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-max-128-gb-apple-turkiye-garantili__0479650541650639.jpg",
+            "price": 31502,
+            "instantDiscountPrice": 32500,
+            "rate" : 4.3,
+            "sellerName": "KOÇDAĞITIMMERKEZİ"
+        }, {
+            "id":517974191,
+            "title": "Apple iPhone 13 Pro Max 256 GB (Apple Türkiye Garantili) Apple iPhone 13 Pro",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-pro-max-256-gb-apple-turkiye-garantili__0479650541650639.jpg",
+            "price": 35900,
+            "rate" : 4.1,
+            "sellerName": "KOÇDAĞITIMMERKEZİ"
+        }, {
+            "id":516076403,
+            "title": "Apple iPhone",
+            "image": "https://n11scdn.akamaized.net/a1/{0}/elektronik/cep-telefonu/apple-iphone-13-128-gb-apple-turkiye-garantili__1148267101141060.jpg",
+            "price": 18299,
+
+            "rate" : 2.7,
+            "sellerName": "TeknoNet"
+        }
+    ]
+}
